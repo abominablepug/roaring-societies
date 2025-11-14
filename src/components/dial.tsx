@@ -1,4 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
+import Wheel from './dial/Wheel';
+import Notch from './dial/Notch';
+import CenterCap from './dial/CenterCap';
 
 type DialProps = {
   size?: number;
@@ -115,21 +118,10 @@ export default function Dial({
   const currentIndex = Math.round(angle / notchAngle) % notches;
 
   const wheelStyle: React.CSSProperties = {
-    width: size,
-    height: size,
-    borderRadius: "50%",
-    background:
-      "radial-gradient(circle at center, #fff 0 55%, rgba(0,0,0,0.03) 56%)",
-    boxShadow: "inset 0 6px 18px rgba(0,0,0,0.12), 0 6px 18px rgba(0,0,0,0.08)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    userSelect: "none",
-    touchAction: "none",
-    position: "relative",
-    cursor: "grab",
     transform: `rotate(${angle}deg)`,
     transition: isSnapping ? "transform 180ms cubic-bezier(.2,.9,.2,1)" : "none",
+    background: "radial-gradient(circle at center, #fff 0 55%, rgba(0,0,0,0.03) 56%)",
+    boxShadow: "inset 0 6px 18px rgba(0,0,0,0.12), 0 6px 18px rgba(0,0,0,0.08)",
   };
 
   const rimSize = Math.max(8, Math.round(size * 0.06));
@@ -137,42 +129,9 @@ export default function Dial({
 
   const notchMarks = new Array(notches).fill(0).map((_, i) => {
     const angleDeg = i * notchAngle;
-    const markStyle: React.CSSProperties = {
-      position: "absolute",
-      width: rimSize,
-      height: rimSize * 2.1,
-      background: "#333",
-      borderRadius: 2,
-      top: 10,
-      left: "50%",
-      transformOrigin: `50% ${size / 2 - 10}px`,
-      transform: `translateX(-50%) rotate(${angleDeg}deg) translateY(-${
-        size / 2 - 10 - rimSize
-      }px)`,
-      opacity: 0.95,
-    };
-    // make every (notches/12)th mark longer or thicker if desired
     const isMajor = notches <= 12 ? i % Math.max(1, Math.floor(notches / 12)) === 0 : i % 3 === 0;
-    if (isMajor) {
-      markStyle.height = rimSize * 3.2;
-      markStyle.background = "#111";
-      markStyle.width = Math.max(rimSize, 3);
-    }
-    return <div key={i} style={markStyle} aria-hidden />;
+    return <Notch key={i} angleDeg={angleDeg} size={size} rimSize={rimSize} isMajor={isMajor} />;
   });
-
-  const centerCapStyle: React.CSSProperties = {
-    width: centerSize,
-    height: centerSize,
-    borderRadius: "50%",
-    background: "linear-gradient(180deg,#f7f7f7,#e9e9e9)",
-    boxShadow: "inset 0 4px 8px rgba(0,0,0,0.08)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontWeight: 600,
-    color: "#222",
-  };
 
   return (
     <div
@@ -181,33 +140,14 @@ export default function Dial({
       aria-valuemax={notches - 1}
       aria-valuenow={currentIndex}
       aria-label="Rotary dial"
-      style={{
-        width: size,
-        height: size + 20,
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      className="inline-flex items-center justify-center"
+      style={{ width: size, height: size + 20 }}
     >
-      <div
-        ref={ref}
-        style={wheelStyle}
-        onMouseDown={handlePointerStart}
-        onTouchStart={handlePointerStart}
-      >
+      <Wheel ref={ref} size={size} style={wheelStyle} onMouseDown={handlePointerStart} onTouchStart={handlePointerStart}>
         {notchMarks}
-        <div
-          style={{
-            position: "absolute",
-            width: size - rimSize * 0.4,
-            height: size - rimSize * 0.4,
-            borderRadius: "50%",
-            boxShadow: "inset 0 -6px 10px rgba(0,0,0,0.05)",
-            pointerEvents: "none",
-          }}
-        />
-        <div style={centerCapStyle}>{currentIndex}</div>
-      </div>
+        <div className="absolute rounded-full pointer-events-none" style={{ width: size - rimSize * 0.4, height: size - rimSize * 0.4, boxShadow: 'inset 0 -6px 10px rgba(0,0,0,0.05)' }} />
+        <CenterCap size={centerSize}>{currentIndex}</CenterCap>
+      </Wheel>
     </div>
   );
 }

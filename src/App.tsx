@@ -13,7 +13,7 @@ export default function App() {
               size={300}
               notches={12}
               initialIndex={0}
-              onChange={(index) => setScreen(0)}
+              onChange={(index) => setScreen(index)}
             />
           </div>
         )
@@ -27,8 +27,13 @@ export default function App() {
   }
 
   return (
-    <>
-      {generateScreen()}
-    </>
+    <div className="h-screen w-full bg-[url(./images/imagebg.jpg)] bg-cover bg-center flex justify-center items-center">
+      <Dial
+        size={400}
+        notches={10}
+        initialIndex={0}
+        onChange={(index) => setScreen(index)}
+      />
+    </div>
   )
 }
