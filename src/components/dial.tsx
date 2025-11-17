@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import Wheel from './dial/Wheel';
-import Notch from './dial/Notch';
 import CenterCap from './dial/CenterCap';
 
 type DialProps = {
@@ -8,6 +7,7 @@ type DialProps = {
   notches?: number;
   initialIndex?: number;
   onChange?: (index: number) => void;
+  imageSrc?: string;
 };
 
 function clampAngle(a: number) {
@@ -30,6 +30,7 @@ export default function Dial({
   notches = 12,
   initialIndex = 0,
   onChange,
+  imageSrc,
 }: DialProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [angle, setAngle] = useState(() => {
@@ -118,20 +119,13 @@ export default function Dial({
   const currentIndex = Math.round(angle / notchAngle) % notches;
 
   const wheelStyle: React.CSSProperties = {
-    transform: `rotate(${angle}deg)`,
-    transition: isSnapping ? "transform 180ms cubic-bezier(.2,.9,.2,1)" : "none",
-    background: "radial-gradient(circle at center, #fff 0 55%, rgba(0,0,0,0.03) 56%)",
-    boxShadow: "inset 0 6px 18px rgba(0,0,0,0.12), 0 6px 18px rgba(0,0,0,0.08)",
+  transition: isSnapping ? "transform 180ms cubic-bezier(.2,.9,.2,1)" : "none",
+  background: "transparent",
+  boxShadow: "none",
   };
 
   const rimSize = Math.max(8, Math.round(size * 0.06));
   const centerSize = Math.round(size * 0.18);
-
-  const notchMarks = new Array(notches).fill(0).map((_, i) => {
-    const angleDeg = i * notchAngle;
-    const isMajor = notches <= 12 ? i % Math.max(1, Math.floor(notches / 12)) === 0 : i % 3 === 0;
-    return <Notch key={i} angleDeg={angleDeg} size={size} rimSize={rimSize} isMajor={isMajor} />;
-  });
 
   return (
     <div
@@ -143,8 +137,12 @@ export default function Dial({
       className="inline-flex items-center justify-center"
       style={{ width: size, height: size + 20 }}
     >
-      <Wheel ref={ref} size={size} style={wheelStyle} onMouseDown={handlePointerStart} onTouchStart={handlePointerStart}>
-        {notchMarks}
+  <Wheel ref={ref} size={size} style={wheelStyle} onMouseDown={handlePointerStart} onTouchStart={handlePointerStart}>
+        {imageSrc ? (
+          <img src={imageSrc} alt="dial" className="block rounded-full" style={{ width: size, height: size, objectFit: 'cover', transform: `rotate(${angle}deg)`, transition: isSnapping ? 'transform 180ms cubic-bezier(.2,.9,.2,1)' : 'none', pointerEvents: 'none' }} />
+        ) : (
+          <div className="rounded-full bg-gray-100" style={{ width: size, height: size, boxShadow: 'inset 0 6px 18px rgba(0,0,0,0.06)' }} />
+        )}
         <div className="absolute rounded-full pointer-events-none" style={{ width: size - rimSize * 0.4, height: size - rimSize * 0.4, boxShadow: 'inset 0 -6px 10px rgba(0,0,0,0.05)' }} />
         <CenterCap size={centerSize}>{currentIndex}</CenterCap>
       </Wheel>

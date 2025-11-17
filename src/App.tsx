@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Dial from './components/dial';
+import dialImg from './images/dial.png';
 
 export default function App() {
   const [screen, setScreen] = useState(0);
@@ -33,6 +34,7 @@ export default function App() {
         notches={10}
         initialIndex={0}
         onChange={(index) => setScreen(index)}
+        imageSrc={dialImg}
       />
     </div>
   )
