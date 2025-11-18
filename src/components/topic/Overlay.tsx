@@ -37,7 +37,8 @@ export default function Overlay({ visible, onClose, children, className }: Overl
   if (!mounted) return null
 
   // keep pointer events enabled while mounted so overlay captures input
-  const pointerEventsClass = mounted ? 'pointer-events-auto' : 'pointer-events-none'
+  // while mounted we only want pointer events when the overlay is active (not during hide animation)
+  const pointerEventsClass = isActive ? 'pointer-events-auto' : 'pointer-events-none'
 
   // root covers the viewport and captures input; content will animate and fill
   const rootBase = [
@@ -71,7 +72,7 @@ export default function Overlay({ visible, onClose, children, className }: Overl
 
   const contentState = isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
 
-  const closeBtn = `absolute top-4 right-4 bg-transparent border-0 text-3xl leading-none cursor-pointer text-gray-700 p-1 z-10`
+  const closeBtn = `absolute top-4 right-4 bg-transparent border-0 text-3xl leading-none cursor-pointer text-white p-1 z-10`
 
   if (typeof document === 'undefined') return null
 

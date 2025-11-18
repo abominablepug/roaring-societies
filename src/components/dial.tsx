@@ -76,9 +76,10 @@ export default function Dial({
 
       setIsSnapping(true);
       setAngle((current) => {
-        const targetIndex = Math.round(current / notchAngle) % notches;
-        const snapped = clampAngle(targetIndex * notchAngle);
-        onChange?.(targetIndex < 0 ? targetIndex + notches : targetIndex);
+        const targetIndex = Math.round(current / notchAngle);
+        const normalized = ((targetIndex % notches) + notches) % notches;
+        const snapped = clampAngle(normalized * notchAngle);
+        onChange?.(normalized + 1);
         return snapped;
       });
 
@@ -116,7 +117,9 @@ export default function Dial({
     startRotation.current = angle;
   }
 
-  const currentIndex = Math.round(angle / notchAngle) % notches;
+  const rawIndex = Math.round(angle / notchAngle);
+  const currentIndex = ((rawIndex % notches) + notches) % notches; // normalized 0..notches-1
+  const displayIndex = currentIndex + 1; // display as 1..N
 
   const wheelStyle: React.CSSProperties = {
   transition: isSnapping ? "transform 180ms cubic-bezier(.2,.9,.2,1)" : "none",
@@ -130,9 +133,9 @@ export default function Dial({
   return (
     <div
       role="slider"
-      aria-valuemin={0}
-      aria-valuemax={notches - 1}
-      aria-valuenow={currentIndex}
+  aria-valuemin={1}
+  aria-valuemax={notches}
+  aria-valuenow={displayIndex}
       aria-label="Rotary dial"
       className="inline-flex items-center justify-center"
       style={{ width: size, height: size + 20 }}
@@ -144,7 +147,7 @@ export default function Dial({
           <div className="rounded-full bg-gray-100" style={{ width: size, height: size, boxShadow: 'inset 0 6px 18px rgba(0,0,0,0.06)' }} />
         )}
         <div className="absolute rounded-full pointer-events-none" style={{ width: size - rimSize * 0.4, height: size - rimSize * 0.4, boxShadow: 'inset 0 -6px 10px rgba(0,0,0,0.05)' }} />
-        <CenterCap size={centerSize}>{currentIndex}</CenterCap>
+  <CenterCap size={centerSize}>{displayIndex}</CenterCap>
       </Wheel>
     </div>
   );
