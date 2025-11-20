@@ -7,7 +7,7 @@ const racialTension: Topic =
   {
     id: 'racial-tension',
     title: 'Racial Tension & Violence',
-    backgroundImage: '/src/images/court_exterior.png',
+    backgroundImage: "/images/museumBackground.png",
     platforms: [
       { id: 'p1', x: 10, y: 65, width: 25 },
       { id: 's2', x: 40, y: 70, width: 10 }, // Step to P2
@@ -25,7 +25,7 @@ const racialTension: Topic =
         subRoom: {
           id: 'sub-rt-jc',
           title: 'Jim Crow Laws',
-          backgroundImage: '/src/images/segregated_fountain.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'push-sp-1', x: 0, y: 50, width: 25 },
             { id: 'push-sp-2', x: 75, y: 50, width: 25 },
@@ -74,7 +74,7 @@ const racialTension: Topic =
         subRoom: {
           id: 'sub-rt-kkk',
           title: 'The KKK & Red Summer',
-          backgroundImage: '/src/images/burning_cross_bg.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'def-sp1', x: 15, y: 30, width: 25 },
             { id: 'def-sp2', x: 60, y: 25, width: 25 },
@@ -120,7 +120,7 @@ const racialTension: Topic =
         subRoom: {
           id: 'sub-rt-native',
           title: 'Native American Policies',
-          backgroundImage: '/src/images/reservation_bg.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'rt-sp1', x: 80, y: 67, width: 10 },
             { id: 'rt-sp2', x: 45, y: 54, width: 10 },

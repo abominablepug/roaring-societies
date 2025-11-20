@@ -7,7 +7,7 @@ const xenoImm: Topic =
   {
     id: 'xenophobia',
     title: 'Xenophobia & Immigration',
-    backgroundImage: '/src/images/ellis_island.png',
+    backgroundImage: "/images/museumBackground.png",
     platforms: [
       { id: 'p1', x: 10, y: 65, width: 20 },
       { id: 's1', x: 35, y: 70, width: 10 },
@@ -25,7 +25,7 @@ const xenoImm: Topic =
         subRoom: {
           id: 'sub-xeno-soc',
           title: 'Social Intolerance',
-          backgroundImage: '/src/images/crowd.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {
@@ -64,7 +64,7 @@ const xenoImm: Topic =
         subRoom: {
           id: 'sub-xeno-law',
           title: 'Restrictive Laws',
-          backgroundImage: '/src/images/congress.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {
@@ -103,7 +103,7 @@ const xenoImm: Topic =
         subRoom: {
           id: 'sub-xeno-labor',
           title: 'Fear of Anarchy',
-          backgroundImage: '/src/images/strike.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {

@@ -7,7 +7,7 @@ const gitlow: Topic =
   {
     id: 'gitlow',
     title: 'Gitlow v. New York',
-    backgroundImage: '/src/images/scotus_building.png',
+    backgroundImage: "/images/museumBackground.png",
     platforms: [
       { id: 'p1', x: 10, y: 70, width: 20 },
       { id: 's1', x: 35, y: 75, width: 10 },
@@ -25,7 +25,7 @@ const gitlow: Topic =
         subRoom: {
           id: 'sub-git-cause',
           title: 'The Arrest',
-          backgroundImage: '/src/images/police_station.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {
@@ -64,7 +64,7 @@ const gitlow: Topic =
         subRoom: {
           id: 'sub-git-op',
           title: 'The Ruling',
-          backgroundImage: '/src/images/court_bench.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {
@@ -103,7 +103,7 @@ const gitlow: Topic =
         subRoom: {
           id: 'sub-git-sig',
           title: 'Modern Impact',
-          backgroundImage: '/src/images/const_bg.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {

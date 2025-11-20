@@ -7,7 +7,7 @@ const prohibition: Topic =
   {
     id: 'prohibition',
     title: 'Prohibition',
-    backgroundImage: '/src/images/speakeasy_alley.png',
+    backgroundImage: "/images/museumBackground.png",
     platforms: [
       { id: 'p1', x: 5, y: 70, width: 15 },
       { id: 's2', x: 23, y: 75, width: 8 },
@@ -27,7 +27,7 @@ const prohibition: Topic =
         subRoom: {
           id: 'sub-pro-cause',
           title: 'Origins of Prohibition',
-          backgroundImage: '/src/images/temperance_march.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {
@@ -66,7 +66,7 @@ const prohibition: Topic =
         subRoom: {
           id: 'sub-pro-det',
           title: 'The 18th Amendment',
-          backgroundImage: '/src/images/congress_vote.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {
@@ -105,7 +105,7 @@ const prohibition: Topic =
         subRoom: {
           id: 'sub-pro-int',
           title: 'Hopes for Prohibition',
-          backgroundImage: '/src/images/church_hall.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [{ id: 'p1', x: 40, y: 60, width: 20 }],
           doors: [
             {
@@ -144,7 +144,7 @@ const prohibition: Topic =
         subRoom: {
           id: 'sub-pro-un',
           title: 'The Reality',
-          backgroundImage: '/src/images/speakeasy_inside.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'p1', x: 20, y: 60, width: 20 },
             { id: 'p2', x: 60, y: 60, width: 20 }

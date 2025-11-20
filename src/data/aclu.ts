@@ -7,7 +7,7 @@ const aclu: Topic =
   {
     id: 'aclu',
     title: 'Birth of the ACLU',
-    backgroundImage: '/src/images/office_interior.png',
+    backgroundImage: "/images/museumBackground.png",
     platforms: [
       { id: 'p1', x: 10, y: 67, width: 10 },
       { id: 'p2', x: 10, y: 54, width: 10 },
@@ -28,7 +28,7 @@ const aclu: Topic =
         subRoom: {
           id: 'sub-aclu-red',
           title: 'The Red Scare',
-          backgroundImage: '/src/images/jail_cell.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'red-sp-1', x: 10, y: 70, width: 10 }, // Step
             { id: 'red-sp-2', x: 30, y: 60, width: 10 }, // Step
@@ -72,7 +72,7 @@ const aclu: Topic =
         subRoom: {
           id: 'sub-aclu-nclb',
           title: 'National Civil Liberties Bureau',
-          backgroundImage: '/src/images/ww1_poster.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'eff-sp-1', x: 12.5, y: 67, width: 15 },
             { id: 'eff-sp-2', x: 42.5, y: 55, width: 15 },
@@ -115,7 +115,7 @@ const aclu: Topic =
         subRoom: {
           id: 'sub-aclu-org',
           title: 'The ACLU Formed',
-          backgroundImage: '/src/images/meeting_room.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'def-sp1', x: 15, y: 30, width: 25 },
             { id: 'def-sp2', x: 60, y: 25, width: 25 },

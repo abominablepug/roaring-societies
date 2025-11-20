@@ -1,4 +1,4 @@
-export type ContentType = 'info' | 'image' | 'question';
+export type ContentType = 'info' | 'image' | 'question' | "video";
 
 export interface BaseContent {
   id: string;
@@ -25,7 +25,13 @@ export interface QuestionContent extends BaseContent {
   correctAnswer: string;
 }
 
-export type InteractionItem = InfoContent | ImageContent | QuestionContent;
+export interface VideoContent extends BaseContent {
+  type: 'video';
+  src: string;
+  caption: string;
+}
+
+export type InteractionItem = InfoContent | ImageContent | QuestionContent | VideoContent;
 
 export interface Platform {
   id: string;
