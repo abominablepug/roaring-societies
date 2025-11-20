@@ -57,7 +57,7 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
   // State to track the angle when drag starts
   const lastAngle = useRef(0);
 
-  const onPanStart = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+  const onPanStart = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     isDragging.current = true;
     // Stop any currently running animation so the user catches the wheel
     rotation.stop();
@@ -67,7 +67,7 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
     lastAngle.current = getAngle({ x: info.point.x, y: info.point.y }, center);
   };
 
-  const onPan = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+  const onPan = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     const center = getCenter();
     const currentAngle = getAngle({ x: info.point.x, y: info.point.y }, center);
     
