@@ -26,6 +26,7 @@ const GameRoom: React.FC<GameRoomProps> = ({ topic, playerImage, onExit }) => {
   // --- State ---
   // activeDoor is for the FINAL popup content
   const [activeDoor, setActiveDoor] = useState<Door | null>(null);
+  const [entryDoor, setEntryDoor] = useState<Door | null>(null);
   // currentSubRoom handles the nested "room within a room"
   const [currentSubRoom, setCurrentSubRoom] = useState<any | null>(null);
   const [alert, setAlert] = useState<string | null>(null);
@@ -183,7 +184,13 @@ const GameRoom: React.FC<GameRoomProps> = ({ topic, playerImage, onExit }) => {
         if (currentSubRoom) {
            // Return to main room
            setCurrentSubRoom(null);
-           resetPhysicsToSpawn();
+           if (entryDoor) {
+             physics.current.x = entryDoor.x;
+             physics.current.y = entryDoor.y;
+             physics.current.vy = 0;
+           } else {
+             resetPhysicsToSpawn();
+           }
         } else {
            // Exit the game entirely
            onExit();
@@ -195,6 +202,7 @@ const GameRoom: React.FC<GameRoomProps> = ({ topic, playerImage, onExit }) => {
       // We check if this door acts as a portal (has a subRoom property)
       // Note: This requires your Data.ts to have 'subRoom' on doors
       if (!currentSubRoom && (found as any).subRoom) {
+        setEntryDoor(found);
         setCurrentSubRoom((found as any).subRoom);
         resetPhysicsToSpawn();
         return;
