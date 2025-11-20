@@ -1,31 +1,44 @@
-import { useState } from 'react';
-import Dial from './components/dial';
-import dialImg from './images/dial.png';
-import Overlay from './components/topic/Overlay';
-import Topic from './components/topic';
-import venky from './images/venky.png';
-import door from './images/door.png';
+import React, { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import { TOPICS } from './data';
+import type { Topic } from './data';
+import Dial from './components/Dial';
+import GameRoom from './components/GameRoom';
+import Bibliography from './components/Bibliography';
 
-export default function App() {
-  const [screen, setScreen] = useState(0);
+function App() {
+  const [currentTopic, setCurrentTopic] = useState<Topic | null>(null);
 
   return (
-    <div className="h-screen w-full bg-[url(./images/imagebg.jpg)] bg-cover bg-center flex justify-center items-center">
-      <Dial
-        size={400}
-        notches={8}
-        initialIndex={0}
-        onChange={(index) => setScreen(index)}
-        imageSrc={dialImg}
-      />
+    <div className="min-h-screen bg-deco-black text-white font-sans selection:bg-deco-gold selection:text-black">
+      
+      {/* Landing / Dial Page */}
+      {/* We hide the dial visually when a topic is active, but keep it in DOM or unmount it */}
+      {!currentTopic && (
+          <Dial 
+            topics={TOPICS} 
+            onSelect={(topic) => setCurrentTopic(topic)}
+            dialImage="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?auto=format&fit=crop&w=1000"
+          />
+      )}
 
-      <div style={{ display: 'none' }}>{screen}</div>
-
-      <Overlay visible={screen !== 0} onClose={() => setScreen(0)}>
-        <div className='flex align-center justify-center h-full w-full'>
-          <Topic topicNumber={screen} characterSrc={venky} doorSrc={door} />
-        </div>
-      </Overlay>
+      {/* Overlays */}
+      <AnimatePresence mode="wait">
+        {currentTopic && (
+           currentTopic.isBibliography ? (
+             <Bibliography key="bib" onClose={() => setCurrentTopic(null)} />
+           ) : (
+             <GameRoom 
+                key="game"
+                topic={currentTopic} 
+                onExit={() => setCurrentTopic(null)}
+                playerImage="https://cdn-icons-png.flaticon.com/512/206/206853.png" // Simple placeholder sprite
+             />
+           )
+        )}
+      </AnimatePresence>
     </div>
-  )
+  );
 }
+
+export default App;

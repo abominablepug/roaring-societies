@@ -1,1 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-playfair: "Playfair Display", serif; 
+  
+  --color-deco-black: #121212;
+  --color-deco-gold: #d4afe7;
+  --color-deco-paper: #f1dda4;
+  --color-deco-gold-light: #fdfbf7;
+}
+
+body {
+  /* Set the default font for the body */
+  font-family: var(--font-montserrat);
+  @apply bg-deco-black text-deco-paper overflow-hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-deco-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-deco-gold rounded-full;
+}
