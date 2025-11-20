@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+# Roaring Societies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Roaring Societies** is a digital history project exploring the profound societal and cultural shifts that defined the 1920s in the United States. This repository serves as the codebase and content archive for the project.
 
-Currently, two official plugins are available:
+## 🏫 Project Context
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was created for **AP US History (APUSH)** to analyze the "Roaring Twenties," a decade characterized by economic prosperity, cultural dynamism, and significant social change.
 
-## React Compiler
+## 📖 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The 1920s were not just about jazz and flappers; they represented a fundamental clash between tradition and modernity. "Roaring Societies" investigates these tensions through several key lenses:
 
-## Expanding the ESLint configuration
+- **Consumer Culture:** The rise of mass consumption, advertising, and the automobile.
+- **Changing Roles for Women:** The emergence of the "New Woman," the Flapper image, and the impact of the 19th Amendment.
+- **Cultural Renaissance:** The Harlem Renaissance and the explosion of Jazz culture.
+- **Social Tensions:** Prohibition, the resurgence of nativism, and the Scopes Trial.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🌐 Live Website
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+You can view the full project and interactive timeline at the link below:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+[**Link to Roaring Societies Website**](INSERT_YOUR_WEBSITE_URL_HERE)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Technologies Used
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **HTML5**
+- **CSS3**
+- **TailwindCSS**
+- **JavaScript**
+- **TypeScript**
+- **React**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 How to View
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository or download the ZIP file.
+2. Open `index.html` in your preferred web browser.
+
+## 📚 Sources
+
+This project relies on primary and secondary sources to ensure historical accuracy. A full bibliography is available on the website.
+
+-----
+
+*Created by Eli Nahoum (with help from John Theodore Lande, Vishnupriya Jayabalaji, and Devika Lakhotia) for APUSH Period 11-1*

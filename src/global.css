@@ -2,6 +2,9 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
   --font-montserrat: "Montserrat", sans-serif;
   --font-playfair: "Playfair Display", serif; 
   
@@ -12,7 +15,6 @@
 }
 
 body {
-  /* Set the default font for the body */
   font-family: var(--font-montserrat);
   @apply bg-deco-black text-deco-paper overflow-hidden;
 }
