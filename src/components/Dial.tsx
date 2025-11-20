@@ -19,12 +19,12 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
   const rotationVelocity = useVelocity(rotation);
   const [activeIndex, setActiveIndex] = useState(0);
   
-  // FIX: This ref goes on a STATIC container, not the rotating wheel
   const containerRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   
   const sliceAngle = 360 / topics.length;
 
+  // 1. Sync Rotation -> Active Index (Existing logic)
   useEffect(() => {
     const unsubscribe = rotation.on("change", (latest) => {
       const normalized = ((latest % 360) + 360) % 360;
@@ -34,21 +34,44 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
     return () => unsubscribe();
   }, [topics.length, sliceAngle, rotation]);
 
+  // 2. Keydown Handler (UPDATED)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === 'enter') {
-        onSelect(topics[activeIndex]);
+      // Get current rotation state
+      const currentRotation = rotation.get();
+      // Snap to the nearest perfect angle (handles cases where wheel is mid-spin)
+      const snappedRotation = Math.round(currentRotation / sliceAngle) * sliceAngle;
+
+      switch (e.key.toLowerCase()) {
+        case 'enter':
+        case 'e':
+          onSelect(topics[activeIndex]);
+          break;
+        case "arrowleft":
+        case "a":
+          // Rotate Clockwise to show Previous Item
+          animate(rotation, snappedRotation + sliceAngle, {
+             type: "spring", stiffness: 50, damping: 20 
+          });
+          break;
+        case "arrowright":
+        case "d":
+          // Rotate Counter-Clockwise to show Next Item
+          animate(rotation, snappedRotation - sliceAngle, {
+             type: "spring", stiffness: 50, damping: 20 
+          });
+          break;
       }
     };
+    
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [sliceAngle, activeIndex, onSelect, topics, rotation]); // Added dependencies
 
   const getCenter = () => {
     if (!containerRef.current) return { x: 0, y: 0 };
-    // Since containerRef is static, this rect is stable and won't jitter
     const rect = containerRef.current.getBoundingClientRect();
     return {
       x: rect.left + rect.width / 2,
@@ -66,11 +89,7 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
 
   const onPanStart = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     isDragging.current = true;
-    
-    // 1. Kill any active momentum/spring immediately
     rotation.stop();
-    
-    // 2. Calculate the angle EXACTLY at the start of the drag
     const center = getCenter();
     lastAngle.current = getAngle({ x: info.point.x, y: info.point.y }, center);
   };
@@ -81,7 +100,6 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
     
     let delta = currentAngle - lastAngle.current;
 
-    // Handle wrapping (e.g. crossing from 179 to -179)
     if (delta > 180) delta -= 360;
     if (delta < -180) delta += 360;
 
@@ -95,7 +113,6 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
     const velocity = rotationVelocity.get();
     const currentRotation = rotation.get();
     
-    // Smooth inertia
     const power = 0.4; 
     const estimatedEndRotation = currentRotation + (velocity * power);
     const snapAngle = Math.round(estimatedEndRotation / sliceAngle) * sliceAngle;
@@ -118,23 +135,14 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
         <div className="h-1 w-64 bg-deco-gold mx-auto mb-4"></div>
       </div>
 
-      {/* STATIC WRAPPER: 
-         This div gives us the stable center point. 
-         It does NOT have rotation styles. 
-      */}
       <div 
         ref={containerRef} 
         className="relative mt-10 w-[300px] md:w-[500px] h-[300px] md:h-[500px]"
       >
-        {/* Decorative Pointer */}
         <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none">
             <div className="w-4 h-12 bg-red-700 border-2 border-deco-gold shadow-lg rounded-b-full" />
         </div>
 
-        {/* ROTATING WHEEL:
-            This handles the drag interactions, but we calculate math 
-            based on the parent's ref.
-        */}
         <motion.div
           className="w-full h-full rounded-full shadow-[0_0_50px_rgba(212,175,55,0.3)] cursor-grab active:cursor-grabbing bg-[#1a1a1a] relative"
           style={{ rotate: rotation }}
@@ -166,12 +174,11 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
                    </span>
                 </div>
               </div>
-            );
+             );
           })}
         </motion.div>
       </div>
 
-      {/* Active Topic Display */}
       <div className="h-32 flex items-center justify-center mt-10 pointer-events-none z-10 px-4 text-center">
            <h2 className="text-4xl md:text-5xl font-serif text-white drop-shadow-md transition-all duration-300">
               {topics[activeIndex]?.title}
