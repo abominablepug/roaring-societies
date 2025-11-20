@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { TOPICS } from './data';
-import type { Topic } from './data';
+import type { Topic } from './types';
 import Dial from './components/Dial';
 import GameRoom from './components/GameRoom';
 import Bibliography from './components/Bibliography';

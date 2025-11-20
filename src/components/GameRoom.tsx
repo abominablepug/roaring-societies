@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, User } from 'lucide-react';
 import * as LucideIcons from 'lucide-react';
-import type { Topic, Door, Platform } from '../types'; // Ensure path is correct
+import type { Topic, Door } from '../types'; // Ensure path is correct
 import SubArea from './SubArea';
 
 // --- Constants for Physics & Tuning ---
@@ -27,8 +27,8 @@ const GameRoom: React.FC<GameRoomProps> = ({ topic, playerImage, onExit }) => {
   // --- Refs for Game Engine ---
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<HTMLDivElement>(null);
-  const requestRef = useRef<number>(null);
-  const previousTimeRef = useRef<number>(null);
+  const requestRef = useRef<number>(0);
+  const previousTimeRef = useRef<number>(0);
   
   // Physics State
   const physics = useRef({
@@ -267,7 +267,7 @@ const GameRoom: React.FC<GameRoomProps> = ({ topic, playerImage, onExit }) => {
              <img src={playerImage} className="w-full h-full object-contain drop-shadow-xl" alt="Player" />
           ) : (
             <div className="w-full h-full bg-blue-600 rounded-full border-2 border-white shadow-[0_0_15px_rgba(0,0,0,0.5)] flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+              <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/20" />
               <User className="text-white relative z-10" size={32} />
             </div>
           )}
