@@ -8,9 +8,8 @@ export const TOPICS: Topic[] = [
   {
     id: 'great-migration',
     title: 'The Great Migration',
-    backgroundImage: '/src/images/train_station_main.png', 
+    backgroundImage: '/src/images/greatMigration.jpg', 
     platforms: [
-      // Floor for reference is ~82
       { id: 'p1', x: 5, y: 70, width: 20 },   // Door 1 Base
       { id: 'p2', x: 30, y: 60, width: 20 },  // Door 2 Base
       { id: 'step-p3', x: 55, y: 70, width: 10 }, // Step to P3
@@ -30,15 +29,108 @@ export const TOPICS: Topic[] = [
           title: 'What was the Great Migration?',
           backgroundImage: '/src/images/map_room.png',
           platforms: [
-            { id: 'sp1', x: 15, y: 65, width: 25 },
-            { id: 'sp2', x: 60, y: 65, width: 25 },
-            { id: 'step1', x: 40, y: 75, width: 10 } // Center Step
+            { id: 'def-sp1', x: 15, y: 30, width: 25 },
+            { id: 'def-sp2', x: 60, y: 25, width: 25 },
+            { id: 'def-sp3', x: 25, y: 70, width: 20 },
+            { id: 'def-sp4', x: 55, y: 60, width: 15 },
+            { id: 'def-step1', x: 20, y: 50, width: 10 },
+            { id: 'def-step2', x: 45, y: 40, width: 8 }
           ],
           doors: [
             {
               id: 'info-def',
               label: 'Overview',
-              x: 27.5, y: 65, // Centered on sp1
+              x: 27.5, y: 30, // Centered on sp1
+              image: 'Info',
+              destinationTitle: 'The Movement',
+              items: [
+                {
+                  id: 'txt-def',
+                  type: 'info',
+                  title: 'Mass Movement',
+                  text: 'The Great Migration was a mass movement of African-Americans out of the South, where they had primarily resided since the abolition of slavery due to a lack of ability to accrue wealth.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "The New Neighbors",
+                  src: "/src/images/temp.png",
+                  caption: "The following image depicts some of those who moved to the North during the time"
+                },
+                {
+                  id: 'mcq-def',
+                  type: 'question',
+                  title: 'Review',
+                  question: 'During which decade did the Great Migration experience a "considerable peak"?',
+                  options: ['1890s', '1920s', '1950s', '1970s'],
+                  correctAnswer: '1920s'
+                }
+              ]
+            },
+            {
+              id: 'info-news',
+              label: 'The Statistics',
+              x: 72.5, y: 25, // Centered on sp2
+              image: 'Statistics',
+              destinationTitle: 'What were the effects?',
+              items: [
+                {
+                  id: 'txt-stat',
+                  type: 'info',
+                  title: 'Some numbers',
+                  text: 'Between 300,000 and 800,000 African-Americans migrated each year within the first few decades of the migration  (Effact #8).'
+                },
+                {
+                  id: "img-stat",
+                  type: "image",
+                  title: "Migration Graph",
+                  src: "/src/images/temp.png",
+                  caption: "This graph shows the number of African-Americans migrating North each decade"
+                },
+                {
+                  id: 'mcq-news',
+                  type: 'question',
+                  title: 'How many? Who?',
+                  question: 'How many of which people were involved in the Great Migration during its peak?',
+                  options: ['100,000-400,000 Jews', '1,000,000-1,200,000 Native Americans', '300,000-670,000 Colombians', '300,000-800,000 African-Americans'],
+                  correctAnswer: '300,000-800,000 African-Americans'
+                }
+              ]
+            },
+            {
+              id: 'time-def',
+              label: 'The Time Span of The Migration',
+              x: 35, y: 70, // Centered on sp3
+              image: 'Info',
+              destinationTitle: 'The Span',
+              items: [
+                {
+                  id: 'txt-def',
+                  type: 'info',
+                  title: 'The Years',
+                  text: 'This migration took place over a few decades, generally considered to have lasted from 1910–1970, but had a considerable peak in the 1920s, with about 75% of all Southern African-Americans having moved to the North by the end of the migration.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Migration Timeline",
+                  src: "/src/images/temp.png",
+                  caption: "This timeline shows the key events during the Great Migration"
+                },
+                {
+                  id: 'mcq-def',
+                  type: 'question',
+                  title: 'Review',
+                  question: 'During which decade did the Great Migration experience a "considerable peak"?',
+                  options: ['1890s', '1920s', '1950s', '1970s'],
+                  correctAnswer: '1920s'
+                }
+              ]
+            },
+            {
+              id: 'backlash-def',
+              label: 'Overview',
+              x: 62.5, y: 60, // Centered on sp1
               image: 'Info',
               destinationTitle: 'The Movement',
               items: [
@@ -57,29 +149,6 @@ export const TOPICS: Topic[] = [
                   correctAnswer: '1920s'
                 }
               ]
-            },
-            {
-              id: 'info-news',
-              label: 'Opposition',
-              x: 72.5, y: 65, // Centered on sp2
-              image: 'Newspaper',
-              destinationTitle: 'Southern Reaction',
-              items: [
-                {
-                  id: 'txt-news',
-                  type: 'info',
-                  title: 'Primary Source',
-                  text: 'A newspaper titled “South Unable to Put Stop to Negro Exodus” (1916) highlights that the migration was not smooth. Southerners directly attacked African-Americans attempting to leave. '
-                },
-                {
-                  id: 'mcq-news',
-                  type: 'question',
-                  title: 'Analysis',
-                  question: 'According to the primary source, how did some Southerners react to the "Exodus"?',
-                  options: ['They encouraged it.', 'They remained neutral.', 'They physically attacked those leaving.', 'They lowered train ticket prices.'],
-                  correctAnswer: 'They physically attacked those leaving.'
-                }
-              ]
             }
           ]
         }
@@ -96,14 +165,21 @@ export const TOPICS: Topic[] = [
           title: 'Push Factors',
           backgroundImage: '/src/images/field_bg.png',
           platforms: [
-            { id: 'p-left', x: 10, y: 55, width: 25 },
-            { id: 'p-right', x: 65, y: 55, width: 25 }
+            { id: 'push-sp-1', x: 0, y: 50, width: 25 },
+            { id: 'push-sp-2', x: 75, y: 50, width: 25 },
+            { id: 'push-sp-3', x: 35, y: 20, width: 10 },
+            { id: 'push-sp-4', x: 55, y: 20, width: 10 },
+            { id: 'push-step-1', x: 30, y: 70, width: 10 },
+            { id: 'push-step-2', x: 60, y: 70, width: 10 },
+            { id: 'push-step-3', x: 42.5, y: 57, width: 15 },
+            { id: 'push-step-4', x: 25, y: 35, width: 10 },
+            { id: 'push-step-5', x: 65, y: 35, width: 10 },
           ],
           doors: [
             {
-              id: 'push-discrim',
+              id: 'push-kkk',
               label: 'Discrimination',
-              x: 22.5, y: 55, // Centered on p-left
+              x: 12.5, y: 50, // Centered on sp-1
               image: 'AlertTriangle',
               destinationTitle: 'Violence & Laws',
               items: [
@@ -126,7 +202,7 @@ export const TOPICS: Topic[] = [
             {
               id: 'push-econ',
               label: 'Hardship',
-              x: 77.5, y: 55, // Centered on p-right
+              x: 87.5, y: 50, // Centered on sp-2
               image: 'TrendingDown',
               destinationTitle: 'Economic Hardship',
               items: [
@@ -145,6 +221,52 @@ export const TOPICS: Topic[] = [
                   correctAnswer: 'Sharecropping'
                 }
               ]
+            },
+            {
+              id: 'push-jc',
+              label: 'Discrimination',
+              x: 40, y: 20, // Centered on sp-3
+              image: 'AlertTriangle',
+              destinationTitle: 'Violence & Laws',
+              items: [
+                {
+                  id: 'txt-kkk',
+                  type: 'info',
+                  title: 'Racial Violence',
+                  text: 'Lynchings were prevalent. The KKK ambushed communities. Jim Crow laws prohibited basic rights based on race, encouraging oppressed individuals to move North. '
+                },
+                {
+                  id: 'mcq-kkk',
+                  type: 'question',
+                  title: 'Check',
+                  question: 'What specific group is mentioned as ambushing Southern African-American communities?',
+                  options: ['The Red Shirts', 'The White League', 'The Ku Klux Klan', 'The Know-Nothings'],
+                  correctAnswer: 'The Ku Klux Klan'
+                }
+              ]
+            },
+            {
+              id: 'push-sharecrop',
+              label: 'Discrimination',
+              x: 60, y: 20, // Centered on sp-4
+              image: 'AlertTriangle',
+              destinationTitle: 'Violence & Laws',
+              items: [
+                {
+                  id: 'txt-kkk',
+                  type: 'info',
+                  title: 'Racial Violence',
+                  text: 'Lynchings were prevalent. The KKK ambushed communities. Jim Crow laws prohibited basic rights based on race, encouraging oppressed individuals to move North. '
+                },
+                {
+                  id: 'mcq-kkk',
+                  type: 'question',
+                  title: 'Check',
+                  question: 'What specific group is mentioned as ambushing Southern African-American communities?',
+                  options: ['The Red Shirts', 'The White League', 'The Ku Klux Klan', 'The Know-Nothings'],
+                  correctAnswer: 'The Ku Klux Klan'
+                }
+              ]
             }
           ]
         }
@@ -161,15 +283,16 @@ export const TOPICS: Topic[] = [
           title: 'Pull Factors',
           backgroundImage: '/src/images/factory_bg.png',
           platforms: [
-             { id: 's1', x: 45, y: 75, width: 10 }, // Step
-             { id: 'p-high-1', x: 20, y: 55, width: 25 },
-             { id: 'p-high-2', x: 55, y: 55, width: 25 }
+             { id: 'pull-sp-1', x: 10, y: 70, width: 10 }, // Step
+             { id: 'pull-sp-2', x: 30, y: 60, width: 10 }, // Step
+             { id: 'pull-sp-3', x: 60, y: 50, width: 10 }, // Step
+             { id: 'pull-sp-4', x: 80, y: 40, width: 10 }, // Step
           ],
           doors: [
             {
               id: 'pull-jobs',
               label: 'Economy',
-              x: 32.5, y: 55, // Centered on p-high-1
+              x: 15, y: 70, // Centered on sp-1
               image: 'DollarSign',
               destinationTitle: 'Economic Freedom',
               items: [
@@ -192,7 +315,7 @@ export const TOPICS: Topic[] = [
             {
               id: 'pull-soc',
               label: 'Relief',
-              x: 67.5, y: 55, // Centered on p-high-2
+              x: 35, y: 60, // Centered on sp-2
               image: 'Users',
               destinationTitle: 'Social Relief',
               items: [
@@ -211,6 +334,52 @@ export const TOPICS: Topic[] = [
                   correctAnswer: 'Educational institutions'
                 }
               ]
+            },
+            {
+              id: 'pull-income',
+              label: 'Economy',
+              x: 65, y: 50, // Centered on sp-3
+              image: 'DollarSign',
+              destinationTitle: 'Economic Freedom',
+              items: [
+                {
+                  id: 'txt-ind',
+                  type: 'info',
+                  title: 'Industrialization',
+                  text: 'The North offered stable urban jobs due to industrialization, providing better income than sharecropping. This allowed families to establish homes.'
+                },
+                {
+                  id: 'mcq-ind',
+                  type: 'question',
+                  title: 'Jobs',
+                  question: 'What characterized the Northern economy compared to the South?',
+                  options: ['Agricultural focus', 'Industrialization and stable urban jobs', 'Tourism based', 'Reliance on slave labor'],
+                  correctAnswer: 'Industrialization and stable urban jobs'
+                }
+              ]
+            },
+            {
+              id: 'pull-edu',
+              label: 'Economy',
+              x: 85, y: 40, // Centered on sp-4
+              image: 'DollarSign',
+              destinationTitle: 'Economic Freedom',
+              items: [
+                {
+                  id: 'txt-ind',
+                  type: 'info',
+                  title: 'Industrialization',
+                  text: 'The North offered stable urban jobs due to industrialization, providing better income than sharecropping. This allowed families to establish homes.'
+                },
+                {
+                  id: 'mcq-ind',
+                  type: 'question',
+                  title: 'Jobs',
+                  question: 'What characterized the Northern economy compared to the South?',
+                  options: ['Agricultural focus', 'Industrialization and stable urban jobs', 'Tourism based', 'Reliance on slave labor'],
+                  correctAnswer: 'Industrialization and stable urban jobs'
+                }
+              ]
             }
           ]
         }
@@ -227,13 +396,75 @@ export const TOPICS: Topic[] = [
           title: 'Cultural Effects',
           backgroundImage: '/src/images/harlem_bg.png',
           platforms: [
-            { id: 'p1', x: 40, y: 60, width: 20 }
+            { id: 'eff-sp-1', x: 12.5, y: 67, width: 15 },
+            { id: 'eff-sp-2', x: 42.5, y: 55, width: 15 },
+            { id: 'eff-sp-3', x: 72.5, y: 67, width: 15 }
           ],
           doors: [
             {
+              id: 'eff-culture',
+              label: 'Harlem',
+              x: 20, y: 67, // Centered on sp-1
+              image: 'Music',
+              destinationTitle: 'The Renaissance',
+              items: [
+                {
+                  id: 'txt-harl',
+                  type: 'info',
+                  title: 'Harlem Renaissance',
+                  text: 'Feeling ostracized, blacks created enclaves like Harlem. This became a safe haven, leading to the Harlem Renaissance—an explosion of black culture and intellect in the 20s/30s.'
+                },
+                {
+                  id: "img-harl",
+                  type: "image",
+                  src: "/src/images/temp.png",
+                  title: "Harlem Band",
+                  caption: "A Harlem Band"
+                },
+                {
+                  id: 'mcq-harl',
+                  type: 'question',
+                  title: 'Culture',
+                  question: 'Why did African Americans establish communities like Harlem?',
+                  options: ['They were forced by new laws', 'They felt ostracized in the North', 'The government paid them to', 'It was the only affordable area'],
+                  correctAnswer: 'They felt ostracized in the North'
+                }
+              ]
+            },
+            {
               id: 'eff-harl',
               label: 'Harlem',
-              x: 50, y: 60, // Centered on p1
+              x: 50, y: 55, // Centered on sp-2
+              image: 'Music',
+              destinationTitle: 'The Renaissance',
+              items: [
+                {
+                  id: 'txt-harl',
+                  type: 'info',
+                  title: 'Harlem Renaissance',
+                  text: 'Feeling ostracized, blacks created enclaves like Harlem. This became a safe haven, leading to the Harlem Renaissance—an explosion of black culture and intellect in the 20s/30s.'
+                },
+                {
+                  id: "img-harl",
+                  type: "image",
+                  src: "/src/images/temp.png",
+                  title: "Harlem Band",
+                  caption: "A Harlem Band"
+                },
+                {
+                  id: 'mcq-harl',
+                  type: 'question',
+                  title: 'Culture',
+                  question: 'Why did African Americans establish communities like Harlem?',
+                  options: ['They were forced by new laws', 'They felt ostracized in the North', 'The government paid them to', 'It was the only affordable area'],
+                  correctAnswer: 'They felt ostracized in the North'
+                }
+              ]
+            },
+            {
+              id: 'eff-impact',
+              label: 'Harlem',
+              x: 80, y: 67, // Centered on sp-3
               image: 'Music',
               destinationTitle: 'The Renaissance',
               items: [

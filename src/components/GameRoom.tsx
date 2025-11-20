@@ -289,7 +289,7 @@ const GameRoom: React.FC<GameRoomProps> = ({ topic, playerImage, onExit }) => {
             </div>
 
             {/* Door Visual - System doors get a different color style */}
-            <div className={`relative w-full h-full ${door.isSystemDoor ? 'bg-red-900/40 border-red-950' : 'bg-amber-900/40 border-amber-950'} border-x-4 border-t-4 rounded-t-xl flex items-center justify-center shadow-2xl hover:opacity-80 transition-all cursor-pointer`}>
+            <div className={`relative w-full h-full ${door.isSystemDoor ? 'bg-red-900/40 border-red-950' : 'bg-amber-900 border-amber-950'} border-x-4 border-t-4 rounded-t-xl flex items-center justify-center shadow-2xl hover:opacity-80 transition-all cursor-pointer`}>
                <div className="absolute inset-2 border-2 border-dashed border-yellow-600/30 rounded-t-lg" />
                <div className="z-10 flex flex-col items-center gap-2">
                   {getIcon(door.image)}

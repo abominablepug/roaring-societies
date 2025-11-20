@@ -34,6 +34,18 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
     return () => unsubscribe();
   }, [topics.length, sliceAngle, rotation]);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === 'enter') {
+        onSelect(topics[activeIndex]);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   const getCenter = () => {
     if (!containerRef.current) return { x: 0, y: 0 };
     // Since containerRef is static, this rect is stable and won't jitter
@@ -104,7 +116,6 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
           The Roaring 20s
         </h1>
         <div className="h-1 w-64 bg-deco-gold mx-auto mb-4"></div>
-        <p className="text-deco-gold-light italic font-serif text-xl">Turn the dial to travel through time</p>
       </div>
 
       {/* STATIC WRAPPER: 
@@ -150,7 +161,7 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
                 <div className="absolute top-0 left-1/2 w-1 h-1/2 bg-deco-gold/30 origin-bottom -translate-x-1/2" />
                 
                 <div className="absolute top-0 left-0 w-full h-full flex justify-center pt-8">
-                   <span className="bg-black/60 backdrop-blur-sm text-deco-gold font-serif font-bold text-lg md:text-2xl px-3 py-1 border border-deco-gold/50 rounded inline-block whitespace-nowrap h-min">
+                   <span className="bg-black/60 backdrop-blur-sm text-deco-gold font-serif font-bold text-md px-1 py-1 border border-deco-gold/50 rounded inline-block whitespace-nowrap h-min">
                      {topic.title}
                    </span>
                 </div>
