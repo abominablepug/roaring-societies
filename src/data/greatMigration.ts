@@ -7,7 +7,7 @@ const greatMigration: Topic =
   {
     id: 'great-migration',
     title: 'The Great Migration',
-    backgroundImage: '/public/images/greatMigration.jpg', 
+    backgroundImage: '/images/greatMigration.jpg', 
     platforms: [
       { id: 'p1', x: 5, y: 70, width: 20 },   // Door 1 Base
       { id: 'p2', x: 30, y: 60, width: 20 },  // Door 2 Base
@@ -26,7 +26,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-def',
           title: 'What was the Great Migration?',
-          backgroundImage: '/public/images/map_room.png',
+          backgroundImage: '/images/map_room.png',
           platforms: [
             { id: 'def-sp1', x: 15, y: 30, width: 25 },
             { id: 'def-sp2', x: 60, y: 25, width: 25 },
@@ -53,7 +53,7 @@ const greatMigration: Topic =
                   id: "img-def",
                   type: "image",
                   title: "The New Neighbors",
-                  src: "/public/images/newNeighbors.jpg",
+                  src: "/images/newNeighbors.jpg",
                   caption: "The following image depicts some of those who moved to the North during the time"
                 },
                 {
@@ -83,7 +83,7 @@ const greatMigration: Topic =
                   id: "img-stat",
                   type: "image",
                   title: "Migration Graph",
-                  src: "/public/images/migrateGraph.png",
+                  src: "/images/migrateGraph.png",
                   caption: "This graph shows the number of African-Americans leaving the South each decade"
                 },
                 {
@@ -113,7 +113,7 @@ const greatMigration: Topic =
                   id: "img-def",
                   type: "image",
                   title: "Migration Timeline",
-                  src: "/public/images/migrationMap.jpg",
+                  src: "/images/migrationMap.jpg",
                   caption: "This map displays the movement of African-Americans from the South to other parts of the country during the Great Migration"
                 },
                 {
@@ -143,7 +143,7 @@ const greatMigration: Topic =
                   id: "img-def",
                   type: "image",
                   title: "Southern Newspaper",
-                  src: "/public/images/southernNewspaper.jpg",
+                  src: "/images/southernNewspaper.jpg",
                   caption: "The following shows a newspaper on the Southern perspective excaliming that Southerners are helpless to prevent the exodus of African-Americans"
                 },
                 {
@@ -169,7 +169,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-push',
           title: 'Push Factors',
-          backgroundImage: '/public/images/field_bg.png',
+          backgroundImage: '/images/field_bg.png',
           platforms: [
             { id: 'push-sp-1', x: 0, y: 50, width: 25 },
             { id: 'push-sp-2', x: 75, y: 50, width: 25 },
@@ -287,7 +287,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-pull',
           title: 'Pull Factors',
-          backgroundImage: '/public/images/factory_bg.png',
+          backgroundImage: '/images/factory_bg.png',
           platforms: [
              { id: 'pull-sp-1', x: 10, y: 70, width: 10 }, // Step
              { id: 'pull-sp-2', x: 30, y: 60, width: 10 }, // Step
@@ -400,7 +400,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-eff',
           title: 'Cultural Effects',
-          backgroundImage: '/public/images/harlem_bg.png',
+          backgroundImage: '/images/harlem_bg.png',
           platforms: [
             { id: 'eff-sp-1', x: 12.5, y: 67, width: 15 },
             { id: 'eff-sp-2', x: 42.5, y: 55, width: 15 },
@@ -423,7 +423,7 @@ const greatMigration: Topic =
                 {
                   id: "img-harl",
                   type: "image",
-                  src: "/public/images/temp.png",
+                  src: "/images/temp.png",
                   title: "Harlem Band",
                   caption: "A Harlem Band"
                 },
@@ -453,7 +453,7 @@ const greatMigration: Topic =
                 {
                   id: "img-harl",
                   type: "image",
-                  src: "/public/images/temp.png",
+                  src: "/images/temp.png",
                   title: "Harlem Band",
                   caption: "A Harlem Band"
                 },
@@ -483,7 +483,7 @@ const greatMigration: Topic =
                 {
                   id: "img-harl",
                   type: "image",
-                  src: "/public/images/temp.png",
+                  src: "/images/temp.png",
                   title: "Harlem Band",
                   caption: "A Harlem Band"
                 },
