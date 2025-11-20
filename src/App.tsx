@@ -32,7 +32,7 @@ function App() {
                 key="game"
                 topic={currentTopic} 
                 onExit={() => setCurrentTopic(null)}
-                playerImage="https://cdn-icons-png.flaticon.com/512/206/206853.png" // Simple placeholder sprite
+                playerImage="/images/mc.png" // Simple placeholder sprite
              />
            )
         )}
