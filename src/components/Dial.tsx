@@ -6,7 +6,7 @@ import {
   useVelocity
 } from 'framer-motion';
 import type { PanInfo } from 'framer-motion';
-import type { Topic } from '../data';
+import type { Topic } from '../types';
 
 interface DialProps {
   topics: Topic[];
@@ -18,28 +18,25 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
   const rotation = useMotionValue(0);
   const rotationVelocity = useVelocity(rotation);
   const [activeIndex, setActiveIndex] = useState(0);
+  
+  // FIX: This ref goes on a STATIC container, not the rotating wheel
   const containerRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   
   const sliceAngle = 360 / topics.length;
 
-  // --- 1. Update Active Index based on rotation ---
   useEffect(() => {
     const unsubscribe = rotation.on("change", (latest) => {
-      // Normalize rotation to 0-360
       const normalized = ((latest % 360) + 360) % 360;
-      
-      // Logic: The pointer is at 0deg (top). 
-      // We calculate which index effectively sits at the top.
       const index = Math.round((360 - normalized) / sliceAngle) % topics.length;
       setActiveIndex(index);
     });
     return () => unsubscribe();
   }, [topics.length, sliceAngle, rotation]);
 
-  // --- 2. Rotational Math Helpers ---
   const getCenter = () => {
     if (!containerRef.current) return { x: 0, y: 0 };
+    // Since containerRef is static, this rect is stable and won't jitter
     const rect = containerRef.current.getBoundingClientRect();
     return {
       x: rect.left + rect.width / 2,
@@ -48,22 +45,21 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
   };
 
   const getAngle = (point: { x: number; y: number }, center: { x: number; y: number }) => {
-    // Calculate angle in degrees
     const dx = point.x - center.x;
     const dy = point.y - center.y;
     return (Math.atan2(dy, dx) * 180) / Math.PI;
   };
 
-  // State to track the angle when drag starts
   const lastAngle = useRef(0);
 
   const onPanStart = (_event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     isDragging.current = true;
-    // Stop any currently running animation so the user catches the wheel
+    
+    // 1. Kill any active momentum/spring immediately
     rotation.stop();
     
+    // 2. Calculate the angle EXACTLY at the start of the drag
     const center = getCenter();
-    // Determine initial angle relative to center
     lastAngle.current = getAngle({ x: info.point.x, y: info.point.y }, center);
   };
 
@@ -71,41 +67,33 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
     const center = getCenter();
     const currentAngle = getAngle({ x: info.point.x, y: info.point.y }, center);
     
-    // Calculate delta (change in angle)
     let delta = currentAngle - lastAngle.current;
 
-    // Fix the "jump" when crossing from 180 to -180 or vice versa
+    // Handle wrapping (e.g. crossing from 179 to -179)
     if (delta > 180) delta -= 360;
     if (delta < -180) delta += 360;
 
-    // Apply the rotation
-    // We add 90 degrees offset because atan2 0 is at 3 o'clock, but our CSS 0 is 12 o'clock
-    // (Though for relative movement "delta", the offset doesn't matter)
     rotation.set(rotation.get() + delta);
-    
     lastAngle.current = currentAngle;
   };
 
   const onPanEnd = () => {
     isDragging.current = false;
     
-    // --- 3. Momentum & Snapping ---
-    const velocity = rotationVelocity.get(); // Current rotational speed
+    const velocity = rotationVelocity.get();
     const currentRotation = rotation.get();
     
-    // "Power" determines how far it slides. 0.2 is short, 0.8 is long.
+    // Smooth inertia
     const power = 0.4; 
     const estimatedEndRotation = currentRotation + (velocity * power);
-
-    // Find the nearest snap point
     const snapAngle = Math.round(estimatedEndRotation / sliceAngle) * sliceAngle;
 
     animate(rotation, snapAngle, {
       type: "spring",
-      stiffness: 40,   // Lower stiffness = heavier feel
-      damping: 15,     // Critical damping prevents too much oscillation
-      mass: 1.2,       // Adds "weight" to the wheel
-      restDelta: 0.001 // Precision for when to stop
+      stiffness: 50,
+      damping: 20,
+      mass: 1,
+      restDelta: 0.001 
     });
   };
 
@@ -119,25 +107,32 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
         <p className="text-deco-gold-light italic font-serif text-xl">Turn the dial to travel through time</p>
       </div>
 
-      <div className="relative mt-10">
+      {/* STATIC WRAPPER: 
+         This div gives us the stable center point. 
+         It does NOT have rotation styles. 
+      */}
+      <div 
+        ref={containerRef} 
+        className="relative mt-10 w-[300px] md:w-[500px] h-[300px] md:h-[500px]"
+      >
         {/* Decorative Pointer */}
         <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center pointer-events-none">
             <div className="w-4 h-12 bg-red-700 border-2 border-deco-gold shadow-lg rounded-b-full" />
         </div>
 
-        {/* The Wheel Container - We attach handlers here */}
+        {/* ROTATING WHEEL:
+            This handles the drag interactions, but we calculate math 
+            based on the parent's ref.
+        */}
         <motion.div
-          ref={containerRef}
-          className="relative w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full shadow-[0_0_50px_rgba(212,175,55,0.3)] cursor-grab active:cursor-grabbing bg-[#1a1a1a]"
+          className="w-full h-full rounded-full shadow-[0_0_50px_rgba(212,175,55,0.3)] cursor-grab active:cursor-grabbing bg-[#1a1a1a] relative"
           style={{ rotate: rotation }}
           onPanStart={onPanStart}
           onPan={onPan}
           onPanEnd={onPanEnd}
           whileTap={{ scale: 0.98 }}
         >
-           {/* Border Ring (Separated so it doesn't rotate if you don't want it to, 
-               but here it's inside the motion.div so it rotates) */}
-           <div className="absolute inset-0 rounded-full border-[12px] border-deco-gold pointer-events-none z-10"></div>
+           <div className="absolute inset-0 rounded-full border-12 border-deco-gold pointer-events-none z-10"></div>
 
           <img 
              src={dialImage || "https://images.unsplash.com/photo-1535332371349-a5d229f65fd5?auto=format&fit=crop&w=1000&q=80"} 
@@ -145,23 +140,16 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
              alt="Dial Texture"
           />
 
-          {/* Slices */}
           {topics.map((topic, i) => {
-             // Calculate position for text (circular layout)
-             // i * sliceAngle places them around. -90 adjusts 0deg to be at the top.
              return (
               <div
                 key={topic.id}
                 className="absolute w-full h-full top-0 left-0 pointer-events-none"
                 style={{ transform: `rotate(${i * sliceAngle}deg)` }}
               >
-                {/* Separator Line */}
                 <div className="absolute top-0 left-1/2 w-1 h-1/2 bg-deco-gold/30 origin-bottom -translate-x-1/2" />
                 
-                {/* Label Container */}
                 <div className="absolute top-0 left-0 w-full h-full flex justify-center pt-8">
-                   {/* We rotate the text back so it's readable if needed, 
-                       or keep it radial. Here we keep it radial but styled nicely. */}
                    <span className="bg-black/60 backdrop-blur-sm text-deco-gold font-serif font-bold text-lg md:text-2xl px-3 py-1 border border-deco-gold/50 rounded inline-block whitespace-nowrap h-min">
                      {topic.title}
                    </span>
@@ -170,18 +158,18 @@ const Dial: React.FC<DialProps> = ({ topics, onSelect, dialImage }) => {
             );
           })}
         </motion.div>
+      </div>
 
-        {/* Active Topic Display at Bottom */}
-        <div className="absolute -bottom-32 w-full flex flex-col items-center pointer-events-none">
-             <h2 className="text-4xl font-serif text-white mb-4 drop-shadow-md transition-all duration-300">
-                {topics[activeIndex]?.title}
-             </h2>
-        </div>
+      {/* Active Topic Display */}
+      <div className="h-32 flex items-center justify-center mt-10 pointer-events-none z-10 px-4 text-center">
+           <h2 className="text-4xl md:text-5xl font-serif text-white drop-shadow-md transition-all duration-300">
+              {topics[activeIndex]?.title}
+           </h2>
       </div>
 
       <button
         onClick={() => onSelect(topics[activeIndex])}
-        className="mt-40 z-20 group relative px-10 py-4 bg-transparent border-2 border-deco-gold overflow-hidden text-deco-gold font-serif text-2xl uppercase tracking-widest hover:text-black transition-colors duration-300 cursor-pointer"
+        className="z-20 group relative px-10 py-4 bg-transparent border-2 border-deco-gold overflow-hidden text-deco-gold font-serif text-2xl uppercase tracking-widest hover:text-black transition-colors duration-300 cursor-pointer"
       >
         <span className="absolute inset-0 w-full h-full bg-deco-gold transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
         <span className="relative z-10 font-bold">Enter Era</span>

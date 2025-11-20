@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import type { Door, InteractionItem, InfoContent, QuestionContent, ImageContent } from '../data';
+import type { Door, InteractionItem, InfoContent, QuestionContent, ImageContent } from '../types';
 import { X, Volume2, HelpCircle, Image as ImageIcon } from 'lucide-react';
 
 interface SubAreaProps {
