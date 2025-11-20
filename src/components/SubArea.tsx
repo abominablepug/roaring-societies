@@ -40,9 +40,9 @@ const SubArea: React.FC<SubAreaProps> = ({ door, onClose }) => {
                 <div className="w-1/3 bg-gray-200 border-r border-gray-300 overflow-y-auto p-4 space-y-3">
                     <h3 className="font-serif font-bold text-xl mb-4 text-deco-black border-b border-gray-400 pb-2">Artifacts</h3>
                     
-                    {door.items.length === 0 && <p className="italic text-gray-500">No artifacts found here.</p>}
+                    {!door.items || door.items.length === 0 && <p className="italic text-gray-500">No artifacts found here.</p>}
 
-                    {door.items.map(item => (
+                    {door.items && door.items.map(item => (
                         <button 
                             key={item.id}
                             onClick={() => setSelectedItem(item)}

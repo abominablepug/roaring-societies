@@ -27,12 +27,20 @@ export interface QuestionContent extends BaseContent {
 
 export type InteractionItem = InfoContent | ImageContent | QuestionContent;
 
-
 export interface Platform {
   id: string;
   x: number; // % from left
   y: number; // % from top
   width: number; // % width
+}
+
+// New Interface to define the nested room structure
+export interface SubRoom {
+  id: string;
+  title: string;
+  backgroundImage?: string;
+  platforms?: Platform[];
+  doors?: Door[]; // Recursive: A subroom has its own doors
 }
 
 export interface Door {
@@ -41,8 +49,16 @@ export interface Door {
   x: number; // Percentage 0-100 relative to room width
   y: number; // Percentage 0-100 relative to room height
   image: string;
-  destinationTitle: string;
-  items: InteractionItem[];
+  destinationTitle: string; // Used for the tooltip or header
+  
+  // CHANGE 1: Items are now optional (a door might just be a portal to a subroom)
+  items?: InteractionItem[]; 
+  
+  // CHANGE 2: Optional nested room configuration
+  subRoom?: SubRoom;
+
+  // CHANGE 3: Helper for the UI (Exit/Return buttons)
+  isSystemDoor?: boolean; 
 }
 
 export interface Topic {
@@ -51,5 +67,5 @@ export interface Topic {
   isBibliography?: boolean;
   backgroundImage?: string;
   doors?: Door[];
-  platforms?: Platform[]; // New field for platforms
+  platforms?: Platform[]; 
 }
