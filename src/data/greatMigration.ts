@@ -7,7 +7,7 @@ const greatMigration: Topic =
   {
     id: 'great-migration',
     title: 'The Great Migration',
-    backgroundImage: '/images/greatMigration.jpg', 
+    backgroundImage: "/images/museumBackground.png",
     platforms: [
       { id: 'p1', x: 5, y: 70, width: 20 },   // Door 1 Base
       { id: 'p2', x: 30, y: 60, width: 20 },  // Door 2 Base
@@ -26,7 +26,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-def',
           title: 'What was the Great Migration?',
-          backgroundImage: '/images/map_room.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'def-sp1', x: 15, y: 30, width: 25 },
             { id: 'def-sp2', x: 60, y: 25, width: 25 },
@@ -169,7 +169,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-push',
           title: 'Push Factors',
-          backgroundImage: '/images/field_bg.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
             { id: 'push-sp-1', x: 0, y: 50, width: 25 },
             { id: 'push-sp-2', x: 75, y: 50, width: 25 },
@@ -287,7 +287,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-pull',
           title: 'Pull Factors',
-          backgroundImage: '/images/factory_bg.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
              { id: 'pull-sp-1', x: 10, y: 70, width: 10 }, // Step
              { id: 'pull-sp-2', x: 30, y: 60, width: 10 }, // Step
@@ -400,17 +400,17 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-eff',
           title: 'Cultural Effects',
-          backgroundImage: '/images/harlem_bg.png',
+          backgroundImage: "/images/museumBackground.png",
           platforms: [
-            { id: 'eff-sp-1', x: 12.5, y: 67, width: 15 },
-            { id: 'eff-sp-2', x: 42.5, y: 55, width: 15 },
-            { id: 'eff-sp-3', x: 72.5, y: 67, width: 15 }
+            { id: 'eff-sp-1', x: 12.5, y: 70, width: 15 },
+            { id: 'eff-sp-2', x: 42.5, y: 57, width: 15 },
+            { id: 'eff-sp-3', x: 72.5, y: 70, width: 15 }
           ],
           doors: [
             {
               id: 'eff-culture',
               label: 'Harlem',
-              x: 20, y: 67, // Centered on sp-1
+              x: 20, y: 70, // Centered on sp-1
               image: 'Music',
               destinationTitle: 'The Drive',
               items: [
@@ -440,7 +440,7 @@ const greatMigration: Topic =
             {
               id: 'eff-harl',
               label: 'Harlem',
-              x: 50, y: 55, // Centered on sp-2
+              x: 50, y: 57, // Centered on sp-2
               image: 'Music',
               destinationTitle: 'The Renaissance',
               items: [
@@ -470,7 +470,7 @@ const greatMigration: Topic =
             {
               id: 'eff-impact',
               label: 'Harlem',
-              x: 80, y: 67, // Centered on sp-3
+              x: 80, y: 70, // Centered on sp-3
               image: 'Music',
               destinationTitle: 'The Impact',
               items: [
