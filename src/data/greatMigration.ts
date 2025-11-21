@@ -47,7 +47,8 @@ const greatMigration: Topic =
                   id: 'txt-def',
                   type: 'info',
                   title: 'Mass Movement',
-                  text: 'The Great Migration was a mass movement of African-Americans out of the South, where they had primarily resided since the abolition of slavery due to a lack of ability to accrue wealth.'
+                  text: 'The Great Migration was a mass movement of African-Americans out of the South, where they had primarily resided since the abolition of slavery due to a lack of ability to accrue wealth.',
+                  audioUrl: '/audio/whatMigration.m4a'
                 },
                 {
                   id: "img-def",
@@ -179,7 +180,7 @@ const greatMigration: Topic =
             { id: 'push-step-2', x: 60, y: 70, width: 10 },
             { id: 'push-step-3', x: 42.5, y: 57, width: 15 },
             { id: 'push-step-4', x: 25, y: 35, width: 10 },
-            { id: 'push-step-5', x: 65, y: 35, width: 10 },
+            { id: 'push-step-5', x: 65, y: 35, width: 10 }
           ],
           doors: [
             {

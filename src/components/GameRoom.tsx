@@ -237,6 +237,25 @@ const GameRoom: React.FC<GameRoomProps> = ({ topic, playerImage, onExit }) => {
           alt="Background" 
           className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none opacity-80"
         />
+
+        {/* --- Floor --- */}
+        <div
+            className="absolute left-0 right-0"
+            style={{
+                top: `${GROUND_LEVEL}vh`,
+                height: `${100 - GROUND_LEVEL}vh`,
+                background: 'linear-gradient(to top, #BF953F, #FCF6BA)', // Gold gradient
+                borderTop: '4px solid #daa520',
+            }}
+        >
+            {/* Shine Effect */}
+            <div
+                className="absolute inset-0"
+                style={{
+                    background: 'linear-gradient(to bottom, rgba(255,255,255,0.4), transparent 50%)'
+                }}
+            />
+        </div>
         
         {/* --- UI Overlay --- */}
         <div className="absolute top-4 left-4 bg-black/60 backdrop-blur text-yellow-100 p-4 rounded border border-yellow-600/50 shadow-xl z-20">
@@ -244,9 +263,10 @@ const GameRoom: React.FC<GameRoomProps> = ({ topic, playerImage, onExit }) => {
             {currentSubRoom ? `LOCATION: ${currentSubRoom.title}` : "LOBBY"}
           </div>
           <ul className="text-xs space-y-1 font-mono">
-            <li>A / D : Move</li>
-            <li>SPACE : Jump</li>
-            <li>E     : Interact</li>
+            <li>A / D     : Move</li>
+            <li>W / SPACE : Jump</li>
+            <li>E / Enter : Interact</li>
+            <li>SHIFT     : Sprint</li>
           </ul>
         </div>
 

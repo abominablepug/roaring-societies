@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import type { Door, InteractionItem, InfoContent, QuestionContent, ImageContent } from '../types';
-import { X, Volume2, HelpCircle, Image as ImageIcon } from 'lucide-react';
+import type { Door, InteractionItem, InfoContent, QuestionContent, ImageContent, VideoContent } from '../types';
+import { X, Volume2, HelpCircle, Image as ImageIcon, Video } from 'lucide-react';
 
 interface SubAreaProps {
     door: Door;
@@ -11,9 +11,33 @@ interface SubAreaProps {
 const SubArea: React.FC<SubAreaProps> = ({ door, onClose }) => {
   const [selectedItem, setSelectedItem] = useState<InteractionItem | null>(null);
 
-  const playAudio = (text: string) => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(utterance);
+
+  const playAudio = (info: InfoContent) => {
+      // 1. Check for Audio URL
+      if (info.audioUrl) {
+          // Use the HTML Audio API to play the pre-recorded sound
+          const audio = new Audio(info.audioUrl);
+          audio.volume = 1; // Set volume (optional, but good practice)
+          
+          // Start playback
+          audio.play()
+              .catch(error => {
+                  console.error("Audio playback failed (e.g., autoplay block):", error);
+              });
+              
+      } else {
+          // 2. Fallback to Text-to-Speech (TTS)
+          const utterance = new SpeechSynthesisUtterance(info.text);
+
+          // Apply TTS settings
+          utterance.lang = 'en-US';
+          utterance.rate = 1.2;
+          utterance.volume = 1;
+          utterance.pitch = 1;
+          
+          // Start TTS speaking
+          window.speechSynthesis.speak(utterance);
+      }
   };
 
   return (
@@ -51,6 +75,7 @@ const SubArea: React.FC<SubAreaProps> = ({ door, onClose }) => {
                             {item.type === 'info' && <Volume2 size={20} />}
                             {item.type === 'question' && <HelpCircle size={20} />}
                             {item.type === 'image' && <ImageIcon size={20} />}
+                            {item.type === 'video' && <Video size={20} />}
                             <span className="font-bold">{item.title}</span>
                         </button>
                     ))}
@@ -70,7 +95,7 @@ const SubArea: React.FC<SubAreaProps> = ({ door, onClose }) => {
                                     <h3 className="text-4xl font-serif mb-6 underline decoration-deco-gold">{selectedItem.title}</h3>
                                     <p className="text-xl leading-relaxed font-serif mb-8">"{(selectedItem as InfoContent).text}"</p>
                                     <button 
-                                        onClick={() => playAudio((selectedItem as InfoContent).text)}
+                                        onClick={() => playAudio((selectedItem as InfoContent))}
                                         className="bg-deco-black text-deco-gold px-6 py-2 rounded-full font-bold uppercase tracking-wider hover:scale-105 transition"
                                     >
                                         Listen to Narration
@@ -83,6 +108,14 @@ const SubArea: React.FC<SubAreaProps> = ({ door, onClose }) => {
                                 <div className="bg-white p-4 shadow-lg rotate-1 border border-gray-300">
                                     <img src={(selectedItem as ImageContent).src} alt="Historical" className="w-full h-auto max-h-96 object-contain mb-4 sepia-[.3]" />
                                     <p className="font-serif italic text-center text-gray-700">{(selectedItem as ImageContent).caption}</p>
+                                </div>
+                            )}
+
+                            {/* VIDEO CARD */}
+                            {selectedItem.type === 'video' && (
+                                <div className="bg-white p-4 shadow-lg -rotate-1 border border-gray-300">
+                                    <video src={(selectedItem as VideoContent).src} controls className="w-full h-auto max-h-96 object-contain mb-4 sepia-[.3]" />
+                                    <p className="font-serif italic text-center text-gray-700">{(selectedItem as VideoContent).caption}</p>
                                 </div>
                             )}
 
