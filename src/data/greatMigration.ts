@@ -7,7 +7,7 @@ const greatMigration: Topic =
   {
     id: 'great-migration',
     title: 'The Great Migration',
-    backgroundImage: "/images/museumBackground.png",
+    backgroundImage: '/images/greatMigration.jpg', 
     platforms: [
       { id: 'p1', x: 5, y: 70, width: 20 },   // Door 1 Base
       { id: 'p2', x: 30, y: 60, width: 20 },  // Door 2 Base
@@ -26,7 +26,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-def',
           title: 'What was the Great Migration?',
-          backgroundImage: "/images/museumBackground.png",
+          backgroundImage: '/images/map_room.png',
           platforms: [
             { id: 'def-sp1', x: 15, y: 30, width: 25 },
             { id: 'def-sp2', x: 60, y: 25, width: 25 },
@@ -47,8 +47,7 @@ const greatMigration: Topic =
                   id: 'txt-def',
                   type: 'info',
                   title: 'Mass Movement',
-                  text: 'The Great Migration was a mass movement of African-Americans out of the South, where they had primarily resided since the abolition of slavery due to a lack of ability to accrue wealth.',
-                  audioUrl: '/audio/whatMigration.m4a'
+                  text: 'The Great Migration was a mass movement of African-Americans out of the South, where they had primarily resided since the abolition of slavery due to a lack of ability to accrue wealth.'
                 },
                 {
                   id: "img-def",
@@ -170,7 +169,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-push',
           title: 'Push Factors',
-          backgroundImage: "/images/museumBackground.png",
+          backgroundImage: '/images/field_bg.png',
           platforms: [
             { id: 'push-sp-1', x: 0, y: 50, width: 25 },
             { id: 'push-sp-2', x: 75, y: 50, width: 25 },
@@ -180,7 +179,7 @@ const greatMigration: Topic =
             { id: 'push-step-2', x: 60, y: 70, width: 10 },
             { id: 'push-step-3', x: 42.5, y: 57, width: 15 },
             { id: 'push-step-4', x: 25, y: 35, width: 10 },
-            { id: 'push-step-5', x: 65, y: 35, width: 10 }
+            { id: 'push-step-5', x: 65, y: 35, width: 10 },
           ],
           doors: [
             {
@@ -193,16 +192,23 @@ const greatMigration: Topic =
                 {
                   id: 'txt-kkk',
                   type: 'info',
-                  title: 'Racial Violence',
+                  title: 'Southern Violence',
                   text: 'Lynchings and racial attacks were prevalent within the South, especially from groups such as the Ku Klux Klan. The KKK would go out of their way to ambush Southern African-American communities.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "KKK Robe",
+                  src: "/images/kkkrobeartifact.jpg",
+                  caption: "KKK Robe Museum Artifact"
                 },
                 {
                   id: 'mcq-kkk',
                   type: 'question',
                   title: 'Check',
-                  question: 'What specific group is mentioned as ambushing Southern African-American communities?',
-                  options: ['The Red Shirts', 'The White League', 'The Ku Klux Klan', 'The Know-Nothings'],
-                  correctAnswer: 'The Ku Klux Klan'
+                  question: 'Which statement best describes the role of the Ku Klux Klan in the South during the Great Migration?',
+                  options: ['The KKK worked to promote lawful protection of African-American communities.', 'The KKK largely ignored African-American migration efforts.', ' The KKK carried out lynchings and violent attacks, targeting African-American communities.', 'The KKK focused solely on political protests rather than violence.'],
+                  correctAnswer: 'The KKK carried out lynchings and violent attacks, targeting African-American communities.'
                 }
               ]
             },
@@ -288,7 +294,7 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-pull',
           title: 'Pull Factors',
-          backgroundImage: "/images/museumBackground.png",
+          backgroundImage: '/images/factory_bg.png',
           platforms: [
              { id: 'pull-sp-1', x: 10, y: 70, width: 10 }, // Step
              { id: 'pull-sp-2', x: 30, y: 60, width: 10 }, // Step
@@ -401,17 +407,17 @@ const greatMigration: Topic =
         subRoom: {
           id: 'sub-gm-eff',
           title: 'Cultural Effects',
-          backgroundImage: "/images/museumBackground.png",
+          backgroundImage: '/images/harlem_bg.png',
           platforms: [
-            { id: 'eff-sp-1', x: 12.5, y: 70, width: 15 },
-            { id: 'eff-sp-2', x: 42.5, y: 57, width: 15 },
-            { id: 'eff-sp-3', x: 72.5, y: 70, width: 15 }
+            { id: 'eff-sp-1', x: 12.5, y: 67, width: 15 },
+            { id: 'eff-sp-2', x: 42.5, y: 55, width: 15 },
+            { id: 'eff-sp-3', x: 72.5, y: 67, width: 15 }
           ],
           doors: [
             {
               id: 'eff-culture',
               label: 'Harlem',
-              x: 20, y: 70, // Centered on sp-1
+              x: 20, y: 67, // Centered on sp-1
               image: 'Music',
               destinationTitle: 'The Drive',
               items: [
@@ -441,7 +447,7 @@ const greatMigration: Topic =
             {
               id: 'eff-harl',
               label: 'Harlem',
-              x: 50, y: 57, // Centered on sp-2
+              x: 50, y: 55, // Centered on sp-2
               image: 'Music',
               destinationTitle: 'The Renaissance',
               items: [
@@ -471,7 +477,7 @@ const greatMigration: Topic =
             {
               id: 'eff-impact',
               label: 'Harlem',
-              x: 80, y: 70, // Centered on sp-3
+              x: 80, y: 67, // Centered on sp-3
               image: 'Music',
               destinationTitle: 'The Impact',
               items: [
