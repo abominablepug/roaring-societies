@@ -199,7 +199,7 @@ const greatMigration: Topic =
                   id: "img-def",
                   type: "image",
                   title: "KKK Robe",
-                  src: "/images/kkkrobeartifact.jpg",
+                  src: "/Downloads/kkkrobeartifact.jpg",
                   caption: "KKK Robe Museum Artifact"
                 },
                 {
@@ -261,7 +261,7 @@ const greatMigration: Topic =
             {
               id: 'push-sharecrop',
               label: 'Discrimination',
-              x: 60, y: 20, // Centered on sp-4
+              x: 60, y: 20,
               image: 'AlertTriangle',
               destinationTitle: 'Violence & Laws',
               items: [
