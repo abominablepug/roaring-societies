@@ -199,7 +199,7 @@ const greatMigration: Topic =
                   id: "img-def",
                   type: "image",
                   title: "KKK Robe",
-                  src: "/Downloads/kkkrobeartifact.jpg",
+                  src: "/images/kkkrobeartifact.jpg",
                   caption: "KKK Robe Museum Artifact"
                 },
                 {
@@ -226,12 +226,19 @@ const greatMigration: Topic =
                   text: 'It was around this time that discriminatory Jim-Crow laws also became prevalent, which would prohibit certain people from exercising their basic human and civil rights solely based on their race and ethnicity. This often encouraged oppressed individuals to move North in search of better living conditions.'
                 },
                 {
+                  id: "img-def",
+                  type: "image",
+                  title: "Jim Crow Image",
+                  src: "/images/jimcrowlaws.png",
+                  caption: "Jim Crow colored-only signs"
+                },
+                {
                   id: 'mcq-share',
                   type: 'question',
                   title: 'Economics',
-                  question: 'Which agricultural system contributed to the poverty of Southern African-Americans?',
-                  options: ['Plantation slavery', 'Sharecropping', 'Industrial farming', 'Subsistence gardening'],
-                  correctAnswer: 'Sharecropping'
+                  question: 'How did Jim Crow laws influence the Great Migration?',
+                  options: ['They expanded civil rights in the South, encouraging people to remain there.', 'They had no significant impact on African-American mobility.', 'They restricted rights based on race, pushing many African-Americans to move North for better conditions.', 'They provided economic incentives for African-Americans to stay in the South.'],
+                  correctAnswer: 'They restricted rights based on race, pushing many African-Americans to move North for better conditions.'
                 }
               ]
             },
@@ -247,6 +254,13 @@ const greatMigration: Topic =
                   type: 'info',
                   title: 'Post-War Hardship',
                   text: 'African Americans in the South were still facing the remaining economic hardships from the Civil War, as while they were technically emancipated, they often did not have the means to accrue wealth over such a short period of time.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Poverty",
+                  src: "/images/africanamericanpoverty.png",
+                  caption: "African American poverty 1900s"
                 },
                 {
                   id: 'mcq-kkk',
@@ -268,16 +282,23 @@ const greatMigration: Topic =
                 {
                   id: 'txt-sharecropping',
                   type: 'info',
-                  title: 'Racial Violence',
+                  title: 'Sharecropping',
                   text: 'Black citizens frequently took part in the sharecropping system due to the lack of present jobs, which led to extremely low wages and poverty. This, combined with present crop failures in the form of floods, earthquakes, and hurricanes, led to an unfortunate economic situation that pushed many black Americans to move North.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Great Mississppi Flood",
+                  src: "/images/greatflood.png",
+                  caption: "Great Mississippi Flood 1927"
                 },
                 {
                   id: 'mcq-kkk',
                   type: 'question',
                   title: 'Check',
-                  question: 'What specific group is mentioned as ambushing Southern African-American communities?',
-                  options: ['The Red Shirts', 'The White League', 'The Ku Klux Klan', 'The Know-Nothings'],
-                  correctAnswer: 'The Ku Klux Klan'
+                  question: 'How did the sharecropping system contribute to the Great Migration?',
+                  options: ['It provided high wages that encouraged African Americans to stay in the South.', 'It offered stable income despite natural disasters.', 'It trapped African Americans in low-wage poverty, and crop failures worsened their economic situation, pushing them to move North.', 'It allowed African Americans to easily buy their own land and build wealth.'],
+                  correctAnswer: 'It trapped African Americans in low-wage poverty, and crop failures worsened their economic situation, pushing them to move North.'
                 }
               ]
             }
