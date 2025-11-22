@@ -48,16 +48,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-jc',
                   type: 'info',
-                  title: 'Origin & Impact',
-                  text: 'Named after a racist minstrel character, these laws segregated schools, hospitals, and transport. Plessy v. Ferguson upheld this. Poll taxes and literacy tests banned voting. '
+                  title: 'Who was Jim-Crow?',
+                  text: 'Jim-Crow Laws, named for a character that a white performer would play by painting his face black and mocking black Americans, were local and state level laws often implemented in the South that allowed segregation of a variety of institutions around the country by skin color. As can be observed in a depiction of Jim Crow as a character from the time titled “Jim Crow”, the character promoted harmful stereotypes through purposeful grammatical and linguistic errors, depicting African-Americans as uneducated and rash.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Jim Crow",
+                  src: "/images/racialtensions/caricature.png",
+                  caption: "Jim Crow caricature 19th century"
                 },
                 {
                   id: 'mcq-jc',
                   type: 'question',
                   title: 'Court Cases',
-                  question: 'Which Supreme Court case provided reasoning for Jim Crow laws to exist?',
-                  options: ['Roe v. Wade', 'Plessy v. Ferguson', 'Brown v. Board', 'Marbury v. Madison'],
-                  correctAnswer: 'Plessy v. Ferguson'
+                  question: 'Who were Jim-Crow Laws named after?',
+                  options: ['A racist character depiction of African-Americans named “Jim Crow”', 'A corrupt, racist politician who vouched for the oppression of Black people', 'A former KKK Grandmaster', 'A crow that stood as a symbol of black oppression in America'],
+                  correctAnswer: 'A racist character depiction of African-Americans named “Jim Crow”'
                 }
               ]
             },
@@ -71,16 +78,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-jc',
                   type: 'info',
-                  title: 'Origin & Impact',
-                  text: 'Named after a racist minstrel character, these laws segregated schools, hospitals, and transport. Plessy v. Ferguson upheld this. Poll taxes and literacy tests banned voting. '
+                  title: 'Segregation',
+                  text: 'These laws would force a multitude of public institutions to become segregated, including schools, hospitals, restaurants, and transportation, often greatly reducing the quality of these services for African-Americans due to lack of funding and resources.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Segregation",
+                  src: "/images/racialtensions/segregatedbuses.png",
+                  caption: "Segregated buses"
                 },
                 {
                   id: 'mcq-jc',
                   type: 'question',
                   title: 'Court Cases',
-                  question: 'Which Supreme Court case provided reasoning for Jim Crow laws to exist?',
-                  options: ['Roe v. Wade', 'Plessy v. Ferguson', 'Brown v. Board', 'Marbury v. Madison'],
-                  correctAnswer: 'Plessy v. Ferguson'
+                  question: 'Where  did segregation from Jim-Crow Laws legally apply?',
+                  options: ['Schools', 'All Public Institutions', 'Restaurants', 'Public Transportation'],
+                  correctAnswer: 'Restaurants'
                 }
               ]
             },
@@ -94,16 +108,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-jc',
                   type: 'info',
-                  title: 'Origin & Impact',
-                  text: 'Named after a racist minstrel character, these laws segregated schools, hospitals, and transport. Plessy v. Ferguson upheld this. Poll taxes and literacy tests banned voting. '
+                  title: 'Voting Barriers',
+                  text: 'These laws would also prevent African-Americans from voting through backwards poll taxes and literacy tests, which were evidently biased against African-American voting groups.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Literacy Test",
+                  src: "/images/racialtensions/literacytest.png",
+                  caption: "Jim Crow literacy test exam"
                 },
                 {
                   id: 'mcq-jc',
                   type: 'question',
                   title: 'Court Cases',
-                  question: 'Which Supreme Court case provided reasoning for Jim Crow laws to exist?',
-                  options: ['Roe v. Wade', 'Plessy v. Ferguson', 'Brown v. Board', 'Marbury v. Madison'],
-                  correctAnswer: 'Plessy v. Ferguson'
+                  question: 'How did certain laws in the South restrict African-American voting rights during the early 20th century?',
+                  options: ['By providing easy access to voter registration', 'Through poll taxes and literacy tests designed to disproportionately prevent African-Americans from voting', 'By offering incentives for African-Americans to vote', 'By requiring all citizens to vote regardless of race'],
+                  correctAnswer: 'Through poll taxes and literacy tests designed to disproportionately prevent African-Americans from voting'
                 }
               ]
             },
@@ -117,16 +138,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-jc',
                   type: 'info',
-                  title: 'Origin & Impact',
-                  text: 'Named after a racist minstrel character, these laws segregated schools, hospitals, and transport. Plessy v. Ferguson upheld this. Poll taxes and literacy tests banned voting. '
+                  title: 'Legal Support',
+                  text: 'To make matters worse, court cases such as Plessy v. Ferguson would provide support and reasoning for these Jim-Crow laws to exist, allowing for the oppression of black Americans for decades to come, only ending after the success of the Civil Rights Movement.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Plessy v Ferguson",
+                  src: "/images/racialtensions/plessy.png",
+                  caption: "Plessy v Ferguson 1896 Supreme Court document"
                 },
                 {
                   id: 'mcq-jc',
                   type: 'question',
                   title: 'Court Cases',
-                  question: 'Which Supreme Court case provided reasoning for Jim Crow laws to exist?',
-                  options: ['Roe v. Wade', 'Plessy v. Ferguson', 'Brown v. Board', 'Marbury v. Madison'],
-                  correctAnswer: 'Plessy v. Ferguson'
+                  question: 'How did the Supreme Court case Plessy v. Ferguson affect African-Americans in the South?',
+                  options: ['It outlawed segregation and strengthened civil rights protections', 'It upheld segregation laws, providing legal justification for Jim Crow laws and long-term oppression', 'It had no significant impact on racial policies', 'It encouraged Northern cities to adopt segregation'],
+                  correctAnswer: 'It upheld segregation laws, providing legal justification for Jim Crow laws and long-term oppression'
                 }
               ]
             },
