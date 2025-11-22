@@ -294,21 +294,28 @@ const aclu: Topic =
               label: 'Baldwin',
               x: 22.5, y: 30, // Centered on p1
               image: 'UserCheck',
-              destinationTitle: 'Defending Everyone',
+              destinationTitle: 'NCLB Opposition',
               items: [
                 {
                   id: 'txt-bald',
                   type: 'info',
-                  title: 'Roger Baldwin',
-                  text: 'After the NCLB disbanded, Roger Baldwin formed the ACLU to fight for ALL citizens\' rights. They worked with the NAACP but also defended the KKK\'s right to free speech. '
+                  title: 'NCLB Opposition and Disbandment',
+                  text: 'Given the popularity of the NCLB and its tendency to oppose the American government, many proponents of and participants in the Palmer Raids directly attacked the NCLB. The NCLB was soon forced to disband, to the dismay of many members and advocates for the liberties of the American people.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Newspaper",
+                  src: "/images/aclu/palmernewspaper.png",
+                  caption: "Palmer Raids NCLB attack newspaper 1920s"
                 },
                 {
                   id: 'mcq-bald',
                   type: 'question',
-                  title: 'Principles',
-                  question: 'Which controversial group did the ACLU defend to protect free speech?',
-                  options: ['The Bolsheviks', 'The Ku Klux Klan', 'The British Army', 'The Prohibitionists'],
-                  correctAnswer: 'The Ku Klux Klan'
+                  title: 'Check',
+                  question: 'Why was the National Civil Liberties Bureau (NCLB) forced to disband?',
+                  options: ['It voluntarily merged with the government', 'It completed its mission and had no further work', 'It completed its mission and had no further work', 'It faced direct attacks from supporters of the Palmer Raids due to its opposition to the government'],
+                  correctAnswer: 'It faced direct attacks from supporters of the Palmer Raids due to its opposition to the government'
                 }
               ]
             },
@@ -322,16 +329,23 @@ const aclu: Topic =
                 {
                   id: 'txt-bald',
                   type: 'info',
-                  title: 'Roger Baldwin',
-                  text: 'After the NCLB disbanded, Roger Baldwin formed the ACLU to fight for ALL citizens\' rights. They worked with the NAACP but also defended the KKK\'s right to free speech. '
+                  title: 'ACLU Founding',
+                  text: 'Roger Baldwin, a former member of the NCLB and a resident of St. Louis, where some of the largest Palmer raids took place, soon took action and reorganized a new group known as the American Civil Liberties Union which shared many of the same goals as the NCLB.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Roger Baldwin",
+                  src: "/images/aclu/baldwin.png",
+                  caption: "Roger Baldwin"
                 },
                 {
                   id: 'mcq-bald',
                   type: 'question',
-                  title: 'Principles',
-                  question: 'Which controversial group did the ACLU defend to protect free speech?',
-                  options: ['The Bolsheviks', 'The Ku Klux Klan', 'The British Army', 'The Prohibitionists'],
-                  correctAnswer: 'The Ku Klux Klan'
+                  title: 'Check',
+                  question: 'Who was instrumental in founding the American Civil Liberties Union (ACLU) after the NCLB disbanded?',
+                  options: ['A. Mitchell Palmer', 'Roger Baldwin', 'W.E.B. Du Bois', 'Booker T. Washington'],
+                  correctAnswer: 'Roger Baldwin'
                 }
               ]
             },
@@ -345,16 +359,23 @@ const aclu: Topic =
                 {
                   id: 'txt-bald',
                   type: 'info',
-                  title: 'Roger Baldwin',
-                  text: 'After the NCLB disbanded, Roger Baldwin formed the ACLU to fight for ALL citizens\' rights. They worked with the NAACP but also defended the KKK\'s right to free speech. '
+                  title: 'ACLU Mission',
+                  text: 'The ACLU’s goal was to directly fight for the freedoms and rights of any and all American citizens regardless of political affiliation, ethnicity, or opinions. The ACLU would often work directly with the NAACP and other groups that fought against the oppression of African-Americans and other minority groups, some of the most pressing issues of the time. However, it is important to note that the ACLU stuck very close to their goals, notably defending the freedom of speech and freedom of organization of the Ku Klux Klan themselves, who they had directly opposed previously.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Civil Liberties",
+                  src: "/images/aclu/civilliberties.png",
+                  caption: "ACLU civil liberties poster 1920s"
                 },
                 {
                   id: 'mcq-bald',
                   type: 'question',
-                  title: 'Principles',
-                  question: 'Which controversial group did the ACLU defend to protect free speech?',
-                  options: ['The Bolsheviks', 'The Ku Klux Klan', 'The British Army', 'The Prohibitionists'],
-                  correctAnswer: 'The Ku Klux Klan'
+                  title: 'Check',
+                  question: 'What was a central principle of the ACLU during its early years?',
+                  options: ['Defending the rights and freedoms of all American citizens, including controversial groups like the Ku Klux Klan, regardless of political affiliation or beliefs', 'Defending only African-Americans and minority groups', 'Supporting government suppression of dissent', 'Limiting freedom of speech to maintain public order'],
+                  correctAnswer: 'Defending the rights and freedoms of all American citizens, including controversial groups like the Ku Klux Klan, regardless of political affiliation or beliefs'
                 }
               ]
             },
@@ -368,16 +389,23 @@ const aclu: Topic =
                 {
                   id: 'txt-bald',
                   type: 'info',
-                  title: 'Roger Baldwin',
-                  text: 'After the NCLB disbanded, Roger Baldwin formed the ACLU to fight for ALL citizens\' rights. They worked with the NAACP but also defended the KKK\'s right to free speech. '
+                  title: 'ACLU Today',
+                  text: 'The ACLU remains active today, fighting for racial justice, reproductive freedom, voting rights, and many more liberties for all American citizens.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Modern Protest",
+                  src: "/images/aclu/modernprotest.png",
+                  caption: "ACLU civil liberties poster 1920s"
                 },
                 {
                   id: 'mcq-bald',
                   type: 'question',
-                  title: 'Principles',
-                  question: 'Which controversial group did the ACLU defend to protect free speech?',
-                  options: ['The Bolsheviks', 'The Ku Klux Klan', 'The British Army', 'The Prohibitionists'],
-                  correctAnswer: 'The Ku Klux Klan'
+                  title: 'Check',
+                  question: 'What issues does the ACLU continue to address in modern times?',
+                  options: ['Exclusively economic policy and taxation', 'Only historical preservation of past civil liberties cases', 'Racial justice, reproductive freedom, voting rights, and many other civil liberties for all Americans', 'Only military and foreign affairs'],
+                  correctAnswer: 'Racial justice, reproductive freedom, voting rights, and many other civil liberties for all Americans'
                 }
               ]
             },
