@@ -479,7 +479,7 @@ const greatMigration: Topic =
                 {
                   id: "img-harl",
                   type: "image",
-                  src: "/images/harlemstreets.png",
+                  src: "/images/harlemstreet.png",
                   title: "Harlem Streets",
                   caption: "Early Harlem neighborhood street scenes"
                 },
