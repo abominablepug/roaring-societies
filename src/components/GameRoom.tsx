@@ -9,7 +9,7 @@ import SubArea from './SubArea';
 const PLAYER_SIZE_PX = 64; 
 const GROUND_LEVEL = 82; 
 const MOVEMENT_SPEED = 40; 
-const JUMP_FORCE = 90; 
+const JUMP_FORCE = 95; 
 const GRAVITY = 250; 
 const SPRINT_MULTIPLIER = 1.8;
 

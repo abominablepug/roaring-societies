@@ -39,9 +39,9 @@ const racialTension: Topic =
           ],
           doors: [
             {
-              id: 'jc-laws',
+              id: 'jc-1',
               label: 'Laws',
-              x: 50, y: 60, // Centered on p1
+              x: 12.5, y: 50, // Centered on p1
               image: 'Book',
               destinationTitle: 'Legal Oppression',
               items: [
@@ -60,7 +60,76 @@ const racialTension: Topic =
                   correctAnswer: 'Plessy v. Ferguson'
                 }
               ]
-            }
+            },
+            {
+              id: 'jc-2',
+              label: 'Laws',
+              x: 87.5, y: 50, // Centered on p1
+              image: 'Book',
+              destinationTitle: 'Legal Oppression',
+              items: [
+                {
+                  id: 'txt-jc',
+                  type: 'info',
+                  title: 'Origin & Impact',
+                  text: 'Named after a racist minstrel character, these laws segregated schools, hospitals, and transport. Plessy v. Ferguson upheld this. Poll taxes and literacy tests banned voting. '
+                },
+                {
+                  id: 'mcq-jc',
+                  type: 'question',
+                  title: 'Court Cases',
+                  question: 'Which Supreme Court case provided reasoning for Jim Crow laws to exist?',
+                  options: ['Roe v. Wade', 'Plessy v. Ferguson', 'Brown v. Board', 'Marbury v. Madison'],
+                  correctAnswer: 'Plessy v. Ferguson'
+                }
+              ]
+            },
+            {
+              id: 'jc-3',
+              label: 'Laws',
+              x: 40, y: 20, // Centered on p1
+              image: 'Book',
+              destinationTitle: 'Legal Oppression',
+              items: [
+                {
+                  id: 'txt-jc',
+                  type: 'info',
+                  title: 'Origin & Impact',
+                  text: 'Named after a racist minstrel character, these laws segregated schools, hospitals, and transport. Plessy v. Ferguson upheld this. Poll taxes and literacy tests banned voting. '
+                },
+                {
+                  id: 'mcq-jc',
+                  type: 'question',
+                  title: 'Court Cases',
+                  question: 'Which Supreme Court case provided reasoning for Jim Crow laws to exist?',
+                  options: ['Roe v. Wade', 'Plessy v. Ferguson', 'Brown v. Board', 'Marbury v. Madison'],
+                  correctAnswer: 'Plessy v. Ferguson'
+                }
+              ]
+            },
+            {
+              id: 'jc-4',
+              label: 'Laws',
+              x: 60, y: 20, // Centered on p1
+              image: 'Book',
+              destinationTitle: 'Legal Oppression',
+              items: [
+                {
+                  id: 'txt-jc',
+                  type: 'info',
+                  title: 'Origin & Impact',
+                  text: 'Named after a racist minstrel character, these laws segregated schools, hospitals, and transport. Plessy v. Ferguson upheld this. Poll taxes and literacy tests banned voting. '
+                },
+                {
+                  id: 'mcq-jc',
+                  type: 'question',
+                  title: 'Court Cases',
+                  question: 'Which Supreme Court case provided reasoning for Jim Crow laws to exist?',
+                  options: ['Roe v. Wade', 'Plessy v. Ferguson', 'Brown v. Board', 'Marbury v. Madison'],
+                  correctAnswer: 'Plessy v. Ferguson'
+                }
+              ]
+            },
           ]
         }
       },
@@ -85,9 +154,9 @@ const racialTension: Topic =
           ],
           doors: [
             {
-              id: 'kkk-info',
+              id: 'kkk-1',
               label: 'The KKK',
-              x: 50, y: 65, // Centered on p1
+              x: 27.5, y: 30, // Centered on p1
               image: 'AlertOctagon',
               destinationTitle: 'Organized Violence',
               items: [
@@ -106,7 +175,76 @@ const racialTension: Topic =
                   correctAnswer: 'Immigrants, Catholics, and Jews'
                 }
               ]
-            }
+            },
+            {
+              id: 'kkk-2',
+              label: 'The KKK',
+              x: 72.5, y: 25, // Centered on p1
+              image: 'AlertOctagon',
+              destinationTitle: 'Organized Violence',
+              items: [
+                {
+                  id: 'txt-red',
+                  type: 'info',
+                  title: 'Red Summer',
+                  text: 'Red Summer (1919) saw riots in tens of cities with hundreds of deaths. The KKK resurged, targeting blacks, immigrants, Catholics, and Jews to protect "True Americanism." '
+                },
+                {
+                  id: 'mcq-kkk-targ',
+                  type: 'question',
+                  title: 'Targets',
+                  question: 'Who did the KKK target besides African-Americans?',
+                  options: ['Only African-Americans', 'Immigrants, Catholics, and Jews', 'Rich Landowners', 'British Loyalists'],
+                  correctAnswer: 'Immigrants, Catholics, and Jews'
+                }
+              ]
+            },
+            {
+              id: 'kkk-3',
+              label: 'The KKK',
+              x: 35, y: 70, // Centered on p1
+              image: 'AlertOctagon',
+              destinationTitle: 'Organized Violence',
+              items: [
+                {
+                  id: 'txt-red',
+                  type: 'info',
+                  title: 'Red Summer',
+                  text: 'Red Summer (1919) saw riots in tens of cities with hundreds of deaths. The KKK resurged, targeting blacks, immigrants, Catholics, and Jews to protect "True Americanism." '
+                },
+                {
+                  id: 'mcq-kkk-targ',
+                  type: 'question',
+                  title: 'Targets',
+                  question: 'Who did the KKK target besides African-Americans?',
+                  options: ['Only African-Americans', 'Immigrants, Catholics, and Jews', 'Rich Landowners', 'British Loyalists'],
+                  correctAnswer: 'Immigrants, Catholics, and Jews'
+                }
+              ]
+            },
+            {
+              id: 'kkk-4',
+              label: 'The KKK',
+              x: 62.5, y: 60, // Centered on p1
+              image: 'AlertOctagon',
+              destinationTitle: 'Organized Violence',
+              items: [
+                {
+                  id: 'txt-red',
+                  type: 'info',
+                  title: 'Red Summer',
+                  text: 'Red Summer (1919) saw riots in tens of cities with hundreds of deaths. The KKK resurged, targeting blacks, immigrants, Catholics, and Jews to protect "True Americanism." '
+                },
+                {
+                  id: 'mcq-kkk-targ',
+                  type: 'question',
+                  title: 'Targets',
+                  question: 'Who did the KKK target besides African-Americans?',
+                  options: ['Only African-Americans', 'Immigrants, Catholics, and Jews', 'Rich Landowners', 'British Loyalists'],
+                  correctAnswer: 'Immigrants, Catholics, and Jews'
+                }
+              ]
+            },
           ]
         }
       },
@@ -128,9 +266,9 @@ const racialTension: Topic =
           ],
           doors: [
             {
-              id: 'native-act',
+              id: 'native-1',
               label: 'Citizenship',
-              x: 27.5, y: 70, // Centered on p1
+              x: 85, y: 67, // Centered on p1
               image: 'Scroll',
               destinationTitle: '1924 Act',
               items: [
@@ -149,7 +287,53 @@ const racialTension: Topic =
                   correctAnswer: 'It forced assimilation and loss of culture'
                 }
               ]
-            }
+            },
+            {
+              id: 'native-2',
+              label: 'Citizenship',
+              x: 50, y: 54, // Centered on p1
+              image: 'Scroll',
+              destinationTitle: '1924 Act',
+              items: [
+                {
+                  id: 'txt-nat',
+                  type: 'info',
+                  title: 'Forced Assimilation',
+                  text: 'The Indian Citizenship Act (1924) granted citizenship but forced assimilation and reservation abandonment. Racial Integrity Laws (e.g., VA) banned interracial marriage, harming Native identity.'
+                },
+                {
+                  id: 'mcq-nat',
+                  type: 'question',
+                  title: 'Citizenship',
+                  question: 'What was an unintended negative effect of the Indian Citizenship Act of 1924?',
+                  options: ['It revoked voting rights', 'It forced assimilation and loss of culture', 'It caused immediate war', 'It doubled reservation sizes'],
+                  correctAnswer: 'It forced assimilation and loss of culture'
+                }
+              ]
+            },
+            {
+              id: 'native-3',
+              label: 'Citizenship',
+              x: 15, y: 40, // Centered on p1
+              image: 'Scroll',
+              destinationTitle: '1924 Act',
+              items: [
+                {
+                  id: 'txt-nat',
+                  type: 'info',
+                  title: 'Forced Assimilation',
+                  text: 'The Indian Citizenship Act (1924) granted citizenship but forced assimilation and reservation abandonment. Racial Integrity Laws (e.g., VA) banned interracial marriage, harming Native identity.'
+                },
+                {
+                  id: 'mcq-nat',
+                  type: 'question',
+                  title: 'Citizenship',
+                  question: 'What was an unintended negative effect of the Indian Citizenship Act of 1924?',
+                  options: ['It revoked voting rights', 'It forced assimilation and loss of culture', 'It caused immediate war', 'It doubled reservation sizes'],
+                  correctAnswer: 'It forced assimilation and loss of culture'
+                }
+              ]
+            },
           ]
         }
       }
