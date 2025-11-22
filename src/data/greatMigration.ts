@@ -473,23 +473,23 @@ const greatMigration: Topic =
                 {
                   id: 'txt-harl',
                   type: 'info',
-                  title: 'Harlem Renaissance',
+                  title: 'The Drive',
                   text: 'The Great Migration had lasting effects on the culture and society of America during and after the Roaring 20’s. African Americans would still feel ostracized within the North, and thus would feel the need to make their own cultures and communities within Northern cities, one of the most prominent of which being Harlem.'
                 },
                 {
                   id: "img-harl",
                   type: "image",
-                  src: "/images/temp.png",
-                  title: "Harlem Band",
-                  caption: "A Harlem Band"
+                  src: "/images/harlemstreets.png",
+                  title: "Harlem Streets",
+                  caption: "Early Harlem neighborhood street scenes"
                 },
                 {
                   id: 'mcq-harl',
                   type: 'question',
                   title: 'Culture',
-                  question: 'Why did African Americans establish communities like Harlem?',
-                  options: ['They were forced by new laws', 'They felt ostracized in the North', 'The government paid them to', 'It was the only affordable area'],
-                  correctAnswer: 'They felt ostracized in the North'
+                  question: 'How did the Great Migration influence African-American culture in Northern cities?',
+                  options: ['African-Americans fully integrated with existing Northern communities without forming separate cultures.', 'Ostracism in the North led African-Americans to create their own cultural communities, such as Harlem.', 'African-Americans avoided Northern cities and primarily settled in rural areas.', 'Northern cities offered no opportunities for cultural or community development.'],
+                  correctAnswer: 'Ostracism in the North led African-Americans to create their own cultural communities, such as Harlem.'
                 }
               ]
             },
@@ -503,15 +503,15 @@ const greatMigration: Topic =
                 {
                   id: 'txt-harl',
                   type: 'info',
-                  title: 'Harlem Renaissance',
+                  title: 'The Renaissance',
                   text: 'The Harlem Renaissance, which was a wonderful explosion of black culture and intellect during the 1920’s and 1930’s, would stem from the creation of Harlem as a safe haven for African-Americans in the North.'
                 },
                 {
                   id: "img-harl",
                   type: "image",
-                  src: "/images/temp.png",
-                  title: "Harlem Band",
-                  caption: "A Harlem Band"
+                  src: "/images/harlemjazz.png",
+                  title: "Harlem Jazz",
+                  caption: "Harlem Renaissance jazz musicians"
                 },
                 {
                   id: 'mcq-harl',
@@ -533,21 +533,21 @@ const greatMigration: Topic =
                 {
                   id: 'txt-harl',
                   type: 'info',
-                  title: 'Harlem Renaissance',
+                  title: 'The Impact',
                   text: 'These newly established cultures would subsequently leave a lasting impact on the culture of America as a whole, the effects of which are still being shown today.'
                 },
                 {
                   id: "img-harl",
                   type: "image",
-                  src: "/images/temp.png",
-                  title: "Harlem Band",
-                  caption: "A Harlem Band"
+                  src: "/images/harlemexhibit.png",
+                  title: "Harlem Exhibit",
+                  caption: "Harlem Renaissance legacy exhibit"
                 },
                 {
                   id: 'mcq-harl',
                   type: 'question',
                   title: 'Culture',
-                  question: 'What is one impact from the Harlem Renaissance and the overall growth of African-American culture today?',
+                  question: 'What is one impact from the Harlem Renaissance and the overall growth of African-American life today?',
                   options: ['Culture', 'Economy', 'Immigration', 'Agriculture'],
                   correctAnswer: 'Culture'
                 }
