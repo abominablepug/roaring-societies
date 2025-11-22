@@ -9,12 +9,13 @@ const prohibition: Topic =
     title: 'Prohibition',
     backgroundImage: "/images/museumBackground.png",
     platforms: [
-      { id: 'p1', x: 5, y: 70, width: 15 },
-      { id: 's2', x: 23, y: 75, width: 8 },
-      { id: 'p2', x: 30, y: 60, width: 15 },
-      { id: 's3', x: 48, y: 65, width: 8 },
-      { id: 'p3', x: 55, y: 50, width: 15 },
-      { id: 'p4', x: 80, y: 70, width: 15 }
+      { id: 'p1', x: 10, y: 67, width: 10 },
+      { id: 'p2', x: 10, y: 54, width: 10 },
+      { id: 'p3', x: 10, y: 41, width: 10 },
+      { id: 'p4', x: 10, y: 28, width: 10 },
+      { id: 's1', x: 30, y: 20, width: 10 },
+      { id: 's2', x: 50, y: 15, width: 10 },
+      { id: 's3', x: 70, y: 50, width: 20 },
     ],
     doors: [
       // --- 6A. Causes ---
