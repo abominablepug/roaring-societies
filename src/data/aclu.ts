@@ -41,21 +41,28 @@ const aclu: Topic =
               label: 'Raids',
               x: 15, y: 70, // Centered on p1
               image: 'Gavel',
-              destinationTitle: 'Palmer Raids',
+              destinationTitle: 'The Red Scare',
               items: [
                 {
                   id: 'txt-palmer',
                   type: 'info',
-                  title: 'Warrantless Raids',
-                  text: 'Fear of communism (USSR) led to the Red Scare. Attorney General A. Mitchell Palmer ordered raids on suspected communists/anarchists without warrants, arresting innocent citizens.'
+                  title: 'The Red Scare',
+                  text: 'The First Red Scare, taking place in the early 20th century, was a response to the growing communist sentiment in America during the establishment and growth of the Soviet Union (USSR). Many believed that communism was an inherent threat to capitalism, and thus, when combined with increased anarchist activity, many began to fear and subsequently hate communism as a whole (Effact #16).'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Red Scare Cartoon",
+                  src: "/images/aclu/redscarecartoon.png",
+                  caption: "Red Scare 1920s political cartoon"
                 },
                 {
                   id: 'mcq-palmer',
                   type: 'question',
                   title: 'Civil Liberties',
-                  question: 'What was the primary legal criticism of the Palmer Raids?',
-                  options: ['They were too expensive', 'They arrested people without warrants', 'They only targeted the rich', 'They happened at night'],
-                  correctAnswer: 'They arrested people without warrants'
+                  question: 'What triggered the First Red Scare in the United States?',
+                  options: [' The end of World War II and the rise of fascism in Europe', 'The success of the Harlem Renaissance', 'Growing communist sentiment in America, influenced by the establishment of the Soviet Union, combined with increased anarchist activity', 'Economic prosperity and industrial growth in the 1920s'],
+                  correctAnswer: 'Growing communist sentiment in America, influenced by the establishment of the Soviet Union, combined with increased anarchist activity'
                 }
               ]
             },
@@ -64,21 +71,28 @@ const aclu: Topic =
               label: 'Raids',
               x: 35, y: 60, // Centered on p1
               image: 'Gavel',
-              destinationTitle: 'Palmer Raids',
+              destinationTitle: 'The Palmer Raids',
               items: [
                 {
                   id: 'txt-palmer',
                   type: 'info',
-                  title: 'Warrantless Raids',
-                  text: 'Fear of communism (USSR) led to the Red Scare. Attorney General A. Mitchell Palmer ordered raids on suspected communists/anarchists without warrants, arresting innocent citizens.'
+                  title: 'The Palmer Raids',
+                  text: 'The Palmer Raids, named for then Attorney General A. Mitchell Palmer who was personally affected by the anarchist movement, were a set of raids on many supposed communist party members, often without warrants or legal justification.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "A. Mitchell Palmer",
+                  src: "/images/aclu/palmer.png",
+                  caption: "A. Mitchell Palmer 1920"
                 },
                 {
                   id: 'mcq-palmer',
                   type: 'question',
                   title: 'Civil Liberties',
-                  question: 'What was the primary legal criticism of the Palmer Raids?',
-                  options: ['They were too expensive', 'They arrested people without warrants', 'They only targeted the rich', 'They happened at night'],
-                  correctAnswer: 'They arrested people without warrants'
+                  question: 'What were the Palmer Raids during the First Red Scare?',
+                  options: ['Peaceful protests advocating for labor rights', 'A series of government raids on suspected communists and anarchists, often conducted without warrants or legal justification', 'Military campaigns against foreign powers', 'Laws passed to protect civil liberties'],
+                  correctAnswer: 'A series of government raids on suspected communists and anarchists, often conducted without warrants or legal justification'
                 }
               ]
             },
@@ -87,21 +101,28 @@ const aclu: Topic =
               label: 'Raids',
               x: 65, y: 50, // Centered on p1
               image: 'Gavel',
-              destinationTitle: 'Palmer Raids',
+              destinationTitle: 'Unlawful Arrests',
               items: [
                 {
                   id: 'txt-palmer',
                   type: 'info',
-                  title: 'Warrantless Raids',
-                  text: 'Fear of communism (USSR) led to the Red Scare. Attorney General A. Mitchell Palmer ordered raids on suspected communists/anarchists without warrants, arresting innocent citizens.'
+                  title: 'Unlawful Arrests',
+                  text: 'While these raids did result in the imprisonment of a handful of anarchists and violent dissenters, many of the raids resulted in the unlawful arrests of innocent citizens who were simply voicing their opinions on politics and the American government.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Palmer Raids",
+                  src: "/images/aclu/palmerraids.png",
+                  caption: "Palmer Raids arrested anarchists"
                 },
                 {
                   id: 'mcq-palmer',
                   type: 'question',
-                  title: 'Civil Liberties',
-                  question: 'What was the primary legal criticism of the Palmer Raids?',
-                  options: ['They were too expensive', 'They arrested people without warrants', 'They only targeted the rich', 'They happened at night'],
-                  correctAnswer: 'They arrested people without warrants'
+                  title: 'Check',
+                  question: 'What was a major issue with the Palmer Raids during the First Red Scare?',
+                  options: ['They completely eliminated anarchist and communist activity in the U.S.', 'They only targeted foreign nationals with no connection to political movements', 'They were universally supported as a defense of civil liberties', 'They resulted in the unlawful arrests of many innocent citizens who were simply expressing political opinions'],
+                  correctAnswer: 'They resulted in the unlawful arrests of many innocent citizens who were simply expressing political opinions'
                 }
               ]
             },
@@ -110,21 +131,28 @@ const aclu: Topic =
               label: 'Raids',
               x: 85, y: 40, // Centered on p1
               image: 'Gavel',
-              destinationTitle: 'Palmer Raids',
+              destinationTitle: 'Civil Liberties',
               items: [
                 {
                   id: 'txt-palmer',
                   type: 'info',
-                  title: 'Warrantless Raids',
-                  text: 'Fear of communism (USSR) led to the Red Scare. Attorney General A. Mitchell Palmer ordered raids on suspected communists/anarchists without warrants, arresting innocent citizens.'
+                  title: 'Civil Liberties',
+                  text: 'The Palmer Raids would generally go down in American history as a severe infringement on American liberties, and, even at the time, many would begin to speak out against these raids and the violation of said American liberties (Effact #17).'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Raids History",
+                  src: "/images/aclu/raidshistory.png",
+                  caption: "ACLU Palmer Raids history"
                 },
                 {
                   id: 'mcq-palmer',
                   type: 'question',
                   title: 'Civil Liberties',
-                  question: 'What was the primary legal criticism of the Palmer Raids?',
-                  options: ['They were too expensive', 'They arrested people without warrants', 'They only targeted the rich', 'They happened at night'],
-                  correctAnswer: 'They arrested people without warrants'
+                  question: 'How are the Palmer Raids generally remembered in American history?',
+                  options: ['As a necessary measure to protect the nation from foreign threats', 'As a severe infringement on American liberties, prompting criticism even at the time', 'As a minor event with little impact on civil rights', 'As a successful campaign that strengthened freedom of speech'],
+                  correctAnswer: 'As a severe infringement on American liberties, prompting criticism even at the time'
                 }
               ]
             },
