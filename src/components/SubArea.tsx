@@ -141,6 +141,7 @@ const TriviaCard = ({ item }: { item: QuestionContent }) => {
     const [status, setStatus] = useState<'unanswered' | 'correct' | 'wrong'>('unanswered');
 
     const checkAnswer = (ans: string) => {
+        console.log("answer: ", ans, " correct answer: ", item.correctAnswer)
         if(ans === item.correctAnswer) setStatus('correct');
         else setStatus('wrong');
     }

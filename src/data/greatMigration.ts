@@ -207,7 +207,7 @@ const greatMigration: Topic =
                   type: 'question',
                   title: 'Check',
                   question: 'Which statement best describes the role of the Ku Klux Klan in the South during the Great Migration?',
-                  options: ['The KKK worked to promote lawful protection of African-American communities.', 'The KKK largely ignored African-American migration efforts.', ' The KKK carried out lynchings and violent attacks, targeting African-American communities.', 'The KKK focused solely on political protests rather than violence.'],
+                  options: ['The KKK worked to promote lawful protection of African-American communities.', 'The KKK largely ignored African-American migration efforts.', 'The KKK carried out lynchings and violent attacks, targeting African-American communities.', 'The KKK focused solely on political protests rather than violence.'],
                   correctAnswer: 'The KKK carried out lynchings and violent attacks, targeting African-American communities.'
                 }
               ]
@@ -245,16 +245,16 @@ const greatMigration: Topic =
                 {
                   id: 'txt-money',
                   type: 'info',
-                  title: 'Economic Struggles',
+                  title: 'Post-War Hardship',
                   text: 'African Americans in the South were still facing the remaining economic hardships from the Civil War, as while they were technically emancipated, they often did not have the means to accrue wealth over such a short period of time.'
                 },
                 {
                   id: 'mcq-kkk',
                   type: 'question',
                   title: 'Check',
-                  question: 'What specific group is mentioned as ambushing Southern African-American communities?',
-                  options: ['The Red Shirts', 'The White League', 'The Ku Klux Klan', 'The Know-Nothings'],
-                  correctAnswer: 'The Ku Klux Klan'
+                  question: 'Why did many African Americans in the South continue to face economic hardship after the Civil War?',
+                  options: ['They were prohibited from working in any Southern industries.', 'They lacked sufficient time and resources to build wealth despite emancipation.', 'They were given large amounts of land that were difficult to manage.', 'They chose not to participate in the Southern economy.'],
+                  correctAnswer: 'They lacked sufficient time and resources to build wealth despite emancipation.'
                 }
               ]
             },
