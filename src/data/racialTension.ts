@@ -331,16 +331,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-nat',
                   type: 'info',
-                  title: 'Forced Assimilation',
-                  text: 'The Indian Citizenship Act (1924) granted citizenship but forced assimilation and reservation abandonment. Racial Integrity Laws (e.g., VA) banned interracial marriage, harming Native identity.'
+                  title: 'Indian Citizenship',
+                  text: 'The Indian Citizenship Act of 1924 granted citizenship to all Native Americans residing within America’s borders, which, while seemingly harmless on a surface level, would inadvertently force many Native Americans to assimilate into American society and abandon their reservations.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Citizenship Certificate",
+                  src: "/images/racialtensions/certificates.png",
+                  caption: "Native Americans receiving citizenship certificates"
                 },
                 {
                   id: 'mcq-nat',
                   type: 'question',
-                  title: 'Citizenship',
-                  question: 'What was an unintended negative effect of the Indian Citizenship Act of 1924?',
-                  options: ['It revoked voting rights', 'It forced assimilation and loss of culture', 'It caused immediate war', 'It doubled reservation sizes'],
-                  correctAnswer: 'It forced assimilation and loss of culture'
+                  title: 'Check',
+                  question: 'What was an unintended (or rather, intended) consequence of the Indian Citizenship Act of 1924?',
+                  options: ['It prevented Native Americans from voting', 'It forced many Native Americans to assimilate into American society and abandon reservations', 'It granted Native Americans complete autonomy over their lands', 'It had no effect on Native American communities'],
+                  correctAnswer: 'It forced many Native Americans to assimilate into American society and abandon reservations'
                 }
               ]
             },
@@ -354,16 +361,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-nat',
                   type: 'info',
-                  title: 'Forced Assimilation',
-                  text: 'The Indian Citizenship Act (1924) granted citizenship but forced assimilation and reservation abandonment. Racial Integrity Laws (e.g., VA) banned interracial marriage, harming Native identity.'
+                  title: 'Cultural Impact of the ICA',
+                  text: 'This act destroyed many Native American societies, cultures, and even individual families, as assimilation policies pushed people away from traditional practices and communities.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Boarding School",
+                  src: "/images/racialtensions/boardingschool.png",
+                  caption: "Native American boarding school 1920s"
                 },
                 {
                   id: 'mcq-nat',
                   type: 'question',
-                  title: 'Citizenship',
-                  question: 'What was an unintended negative effect of the Indian Citizenship Act of 1924?',
-                  options: ['It revoked voting rights', 'It forced assimilation and loss of culture', 'It caused immediate war', 'It doubled reservation sizes'],
-                  correctAnswer: 'It forced assimilation and loss of culture'
+                  title: 'Check',
+                  question: 'How did assimilation policies following the Indian Citizenship Act of 1924 affect Native American communities?',
+                  options: ['They strengthened traditional practices and preserved family structures', 'They destroyed societies, cultures, and families by pushing people away from traditional practices', 'They had no impact on Native American cultural life', 'They only affected economic opportunities without influencing culture'],
+                  correctAnswer: 'They destroyed societies, cultures, and families by pushing people away from traditional practices'
                 }
               ]
             },
@@ -377,16 +391,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-nat',
                   type: 'info',
-                  title: 'Forced Assimilation',
-                  text: 'The Indian Citizenship Act (1924) granted citizenship but forced assimilation and reservation abandonment. Racial Integrity Laws (e.g., VA) banned interracial marriage, harming Native identity.'
+                  title: 'Racial Integrity Laws',
+                  text: 'This discriminatory lawmaking continued with the Racial Integrity Laws within states like Virginia that prevented interracial marriage and created stratification by skin color or ethnicity, further ostracizing and harming Native Americans as a whole.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Virginia Racial Integrity Act",
+                  src: "/images/racialtensions/integritydocument.png",
+                  caption:  "Virginia Racial Integrity Act 1924 document"
                 },
                 {
                   id: 'mcq-nat',
                   type: 'question',
-                  title: 'Citizenship',
-                  question: 'What was an unintended negative effect of the Indian Citizenship Act of 1924?',
-                  options: ['It revoked voting rights', 'It forced assimilation and loss of culture', 'It caused immediate war', 'It doubled reservation sizes'],
-                  correctAnswer: 'It forced assimilation and loss of culture'
+                  title: 'Check',
+                  question: 'What was the purpose of Racial Integrity Laws, such as those in Virginia?',
+                  options: ['To promote interracial marriage and equality', 'To prevent interracial marriage and enforce social stratification by skin color or ethnicity, harming Native Americans', 'To provide economic incentives for Native Americans', 'To integrate Native Americans fully into mainstream society without restrictions'],
+                  correctAnswer: 'To prevent interracial marriage and enforce social stratification by skin color or ethnicity, harming Native Americans'
                 }
               ]
             },
