@@ -181,21 +181,28 @@ const aclu: Topic =
               label: 'Objectors',
               x: 20, y: 67, // Centered on p1
               image: 'UserX',
-              destinationTitle: 'Conscientious Objectors',
+              destinationTitle: 'NCLB',
               items: [
                 {
                   id: 'txt-obj',
                   type: 'info',
-                  title: 'WWI Origins',
-                  text: 'The NCLB formed to protect Conscientious Objectors in WWI who refused the draft. They viewed arrests under the Espionage Acts as unconstitutional. This group was the precursor to the ACLU.'
+                  title: 'NCLB Formation',
+                  text: 'The NCLB, which was a reincarnation of the former Civil Liberties Bureau (CLB), was formed in response to the prosecution of conscientious objectors during World War I who would openly refuse the draft for religious or moral reasons, and would subsequently be punished by law.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "NCLB Document",
+                  src: "/images/aclu/nclbdoc.png",
+                  caption: "National Civil Liberties Bureau document"
                 },
                 {
                   id: 'mcq-obj',
                   type: 'question',
                   title: 'Origins',
-                  question: 'Who did the NCLB primarily defend during World War I?',
-                  options: ['German spies', 'Conscientious Objectors', 'Factory owners', 'Politicians'],
-                  correctAnswer: 'Conscientious Objectors'
+                  question: 'Why was the National Civil Liberties Bureau (NCLB) formed?',
+                  options: ['To support the government’s prosecution of draft evaders', 'To create a national military draft system', 'To respond to the punishment of conscientious objectors during World War I who refused the draft for religious or moral reasons', 'To enforce wartime censorship laws'],
+                  correctAnswer: 'To respond to the punishment of conscientious objectors during World War I who refused the draft for religious or moral reasons'
                 }
               ]
             },
@@ -204,21 +211,28 @@ const aclu: Topic =
               label: 'Objectors',
               x: 50, y: 55, // Centered on p1
               image: 'UserX',
-              destinationTitle: 'Conscientious Objectors',
+              destinationTitle: 'NCLB Mission',
               items: [
                 {
                   id: 'txt-obj',
                   type: 'info',
-                  title: 'WWI Origins',
-                  text: 'The NCLB formed to protect Conscientious Objectors in WWI who refused the draft. They viewed arrests under the Espionage Acts as unconstitutional. This group was the precursor to the ACLU.'
+                  title: 'NCLB Mission',
+                  text: 'The NCLB viewed these imprisonments and arrests as a violation of the freedoms of the American people directly listed in the Constitution, and would go on to provide aid and legal backing to conscientious objectors and the many others affected by the Espionage Acts.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "NCLB Lawyers",
+                  src: "/images/aclu/nclblawyers.png",
+                  caption: "National Civil Liberties Bureau lawyers 1910s"
                 },
                 {
                   id: 'mcq-obj',
                   type: 'question',
-                  title: 'Origins',
-                  question: 'Who did the NCLB primarily defend during World War I?',
-                  options: ['German spies', 'Conscientious Objectors', 'Factory owners', 'Politicians'],
-                  correctAnswer: 'Conscientious Objectors'
+                  title: 'Check',
+                  question: 'What was a key role of the National Civil Liberties Bureau (NCLB)?',
+                  options: ['To enforce the Espionage Acts strictly against all citizens', 'To provide legal aid and support to conscientious objectors and others whose rights were violated under the Espionage Acts', 'To limit free speech during wartime', 'To promote compulsory military service for all Americans'],
+                  correctAnswer: 'To provide legal aid and support to conscientious objectors and others whose rights were violated under the Espionage Acts'
                 }
               ]
             },
@@ -227,21 +241,28 @@ const aclu: Topic =
               label: 'Objectors',
               x: 80, y: 67, // Centered on p1
               image: 'UserX',
-              destinationTitle: 'Conscientious Objectors',
+              destinationTitle: 'NCLB Legacy',
               items: [
                 {
                   id: 'txt-obj',
                   type: 'info',
-                  title: 'WWI Origins',
-                  text: 'The NCLB formed to protect Conscientious Objectors in WWI who refused the draft. They viewed arrests under the Espionage Acts as unconstitutional. This group was the precursor to the ACLU.'
+                  title: 'NCLB Legacy',
+                  text: 'The NCLB would act as the foundation for and the direct precursor of the American Civil Liberties Union (ACLU).'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "ACLU Founders",
+                  src: "/images/aclu/aclufounders.png",
+                  caption: "ACLU founders photo 1920s"
                 },
                 {
                   id: 'mcq-obj',
                   type: 'question',
                   title: 'Origins',
-                  question: 'Who did the NCLB primarily defend during World War I?',
-                  options: ['German spies', 'Conscientious Objectors', 'Factory owners', 'Politicians'],
-                  correctAnswer: 'Conscientious Objectors'
+                  question: 'What organization did the National Civil Liberties Bureau (NCLB) directly precede?',
+                  options: ['The Federal Bureau of Investigation (FBI)', 'The Ku Klux Klan (KKK)', 'The Department of Justice (DOJ)', 'The American Civil Liberties Union (ACLU)'],
+                  correctAnswer: 'The American Civil Liberties Union (ACLU)'
                 }
               ]
             },
