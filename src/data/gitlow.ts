@@ -98,7 +98,7 @@ const gitlow: Topic =
             {
               id: 'cause-3',
               label: 'The Conviction',
-              x: 20, y: 67, // Centered on p1
+              x: 80, y: 67, // Centered on p1
               image: 'AlertCircle',
               destinationTitle: 'Gitlow Conviction',
               items: [
@@ -387,7 +387,7 @@ const gitlow: Topic =
             {
               id: 'incorp-4',
               label: 'Improved Rights',
-              x: 50, y: 60, // Centered on p1
+              x: 62.5, y: 60, // Centered on p1
               image: 'BookOpen',
               destinationTitle: 'Modern Protections',
               items: [
