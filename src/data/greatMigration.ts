@@ -328,21 +328,28 @@ const greatMigration: Topic =
               label: 'Economy',
               x: 15, y: 70, // Centered on sp-1
               image: 'DollarSign',
-              destinationTitle: 'Economic Freedom',
+              destinationTitle: 'Pull Factors',
               items: [
                 {
                   id: 'txt-impct',
                   type: 'info',
-                  title: 'The Impact of the Migration',
-                  text: 'The Great Migration had lasting effects on the culture and society of America during and after the Roaring 20’s. African Americans would still feel ostracized within the North, and thus would feel the need to make their own cultures and communities within Northern cities, one of the most prominent of which being Harlem.'
+                  title: 'Northern Opportunity',
+                  text: 'The North offered more economic opportunities due to its ongoing industrialization, innovation, and urbanization. Urban jobs were numerous, highly stable, and provided a much better source of income than the sharecropping that many African-Americans were accustomed to in the South.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Factory",
+                  src: "/images/africanamericanfactory.png",
+                  caption: "African American factory workers 1920s"
                 },
                 {
                   id: 'mcq-ind',
                   type: 'question',
                   title: 'Jobs',
-                  question: 'What characterized the Northern economy compared to the South?',
-                  options: ['Agricultural focus', 'Industrialization and stable urban jobs', 'Tourism based', 'Reliance on slave labor'],
-                  correctAnswer: 'Industrialization and stable urban jobs'
+                  question: 'Why did many African Americans view the North as a better place to live during the Great Migration?',
+                  options: ['Northern cities relied solely on agriculture and needed more sharecroppers.', 'Industrialization and urbanization created abundant, stable jobs with better wages.', 'The North had fewer cities and more rural land available.', 'Northern jobs generally paid less but offered shorter hours.'],
+                  correctAnswer: 'Industrialization and urbanization created abundant, stable jobs with better wages.'
                 }
               ]
             },
@@ -351,21 +358,28 @@ const greatMigration: Topic =
               label: 'Relief',
               x: 35, y: 60, // Centered on sp-2
               image: 'Users',
-              destinationTitle: 'Social Relief',
+              destinationTitle: 'Pull Factors',
               items: [
                 {
                   id: 'txt-soc',
                   type: 'info',
-                  title: 'Freedoms',
-                  text: 'The North offered voting rights, educational institutions, and aid for oppressed groups. Many also moved to reunite with estranged family members.'
+                  title: 'Economic Stability',
+                  text: 'This source of income would allow black families to establish themselves and their homes, providing grounds for future economic stability and community growth.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Businesses",
+                  src: "/images/blackownedbusiness.png",
+                  caption: "Black-owned business 1920s"
                 },
                 {
                   id: 'mcq-soc',
                   type: 'question',
                   title: 'Society',
-                  question: 'Besides money, what institutions in the North attracted families?',
-                  options: ['Educational institutions', 'Religious monasteries', 'Military academies', 'Private clubs'],
-                  correctAnswer: 'Educational institutions'
+                  question: 'How did improved income opportunities in the North impact African-American families during the Great Migration?',
+                  options: ['It prevented families from forming long-term communities.', 'It allowed families to establish homes and build future economic stability.', 'It caused many families to return to the South.'],
+                  correctAnswer: 'It allowed families to establish homes and build future economic stability.'
                 }
               ]
             },
@@ -374,21 +388,28 @@ const greatMigration: Topic =
               label: 'Economy',
               x: 65, y: 50, // Centered on sp-3
               image: 'DollarSign',
-              destinationTitle: 'Economic Freedom',
+              destinationTitle: 'Pull Factors',
               items: [
                 {
                   id: 'txt-ind',
                   type: 'info',
-                  title: 'Industrialization',
-                  text: 'The North offered stable urban jobs due to industrialization, providing better income than sharecropping. This allowed families to establish homes.'
+                  title: 'Northern Freedom',
+                  text: 'The North was also known to offer more political and social freedoms and aid for oppressed groups, such as the formerly lesser population of Northern African-Americans, which often enticed many Southerners to move North.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "NAACP",
+                  src: "/images/naacp.png",
+                  caption: "NAACP 1920s activism"
                 },
                 {
                   id: 'mcq-ind',
                   type: 'question',
                   title: 'Jobs',
-                  question: 'What characterized the Northern economy compared to the South?',
-                  options: ['Agricultural focus', 'Industrialization and stable urban jobs', 'Tourism based', 'Reliance on slave labor'],
-                  correctAnswer: 'Industrialization and stable urban jobs'
+                  question: 'Besides economic opportunities, what other factor attracted African-Americans to the North during the Great Migration?',
+                  options: ['Strict segregation laws and limited social freedoms', 'Greater political and social freedoms, as well as support for oppressed groups', ' Greater political and social freedoms, as well as support for oppressed groups', 'Government-mandated relocation programs'],
+                  correctAnswer: 'Greater political and social freedoms, as well as support for oppressed groups'
                 }
               ]
             },
@@ -397,21 +418,28 @@ const greatMigration: Topic =
               label: 'Economy',
               x: 85, y: 40, // Centered on sp-4
               image: 'DollarSign',
-              destinationTitle: 'Economic Freedom',
+              destinationTitle: 'Pull Factors',
               items: [
                 {
                   id: 'txt-ind',
                   type: 'info',
-                  title: 'Industrialization',
-                  text: 'The North offered stable urban jobs due to industrialization, providing better income than sharecropping. This allowed families to establish homes.'
+                  title: 'Education & Family',
+                  text: 'Furthermore, the North had a number of educational institutions and opportunities for children and adults alike, which would subsequently allow black families to establish themselves and grow away from their formerly oppressed state. Finally, many former slaves and their families were either forced to move North or voluntarily moved North after emancipation, and thus many relatives wished to reunite with their estranged families.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Students",
+                  src: "/images/africanamericanstudents.png",
+                  caption: "African American students 1920s Northern school"
                 },
                 {
                   id: 'mcq-ind',
                   type: 'question',
                   title: 'Jobs',
-                  question: 'What characterized the Northern economy compared to the South?',
-                  options: ['Agricultural focus', 'Industrialization and stable urban jobs', 'Tourism based', 'Reliance on slave labor'],
-                  correctAnswer: 'Industrialization and stable urban jobs'
+                  question: 'Which factors further encouraged African-Americans to migrate North during the Great Migration?',
+                  options: ['Access to educational opportunities and the chance to reunite with family members', 'Lack of schools and the impossibility of finding relatives', 'Lack of schools and the impossibility of finding relatives', 'Only temporary work opportunities with no long-term benefits'],
+                  correctAnswer: 'Access to educational opportunities and the chance to reunite with family members'
                 }
               ]
             }
