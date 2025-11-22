@@ -192,15 +192,22 @@ const racialTension: Topic =
                   id: 'txt-red',
                   type: 'info',
                   title: 'Red Summer',
-                  text: 'Red Summer (1919) saw riots in tens of cities with hundreds of deaths. The KKK resurged, targeting blacks, immigrants, Catholics, and Jews to protect "True Americanism." '
+                  text: 'During the Roaring 20’s, there were a large number of instances of racial violence towards African-Americans. The Red Summer of 1919, for example, was a period of numerous riots against established black communities that resulted in the deaths of hundreds of people across tens of large American cities (Effact #13).'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Red Summer",
+                  src: "/images/racialtensions/redsummer.png",
+                  caption: "Red Summer 1919 newspaper"
                 },
                 {
                   id: 'mcq-kkk-targ',
                   type: 'question',
                   title: 'Targets',
-                  question: 'Who did the KKK target besides African-Americans?',
-                  options: ['Only African-Americans', 'Immigrants, Catholics, and Jews', 'Rich Landowners', 'British Loyalists'],
-                  correctAnswer: 'Immigrants, Catholics, and Jews'
+                  question: 'What was the Red Summer of 1919?',
+                  options: ['A period of economic prosperity for African-Americans in the South', 'A time of widespread racial violence and riots against African-American communities, resulting in hundreds of deaths', 'The start of the Great Migration from the North to the South', 'A cultural movement promoting African-American art and music'],
+                  correctAnswer: 'A time of widespread racial violence and riots against African-American communities, resulting in hundreds of deaths'
                 }
               ]
             },
@@ -214,16 +221,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-red',
                   type: 'info',
-                  title: 'Red Summer',
-                  text: 'Red Summer (1919) saw riots in tens of cities with hundreds of deaths. The KKK resurged, targeting blacks, immigrants, Catholics, and Jews to protect "True Americanism." '
+                  title: 'KKK Resurgence',
+                  text: 'This racial violence was supplemented by the resurgence of the Ku Klux Klan, a reestablishment of the original group during the Reconstruction Era, which was a radical group that would organize violent attacks on any groups that they believed didn’t reflect “true Americanism.”'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "KKK Rally",
+                  src: "/images/racialtensions/kkkrally.png",
+                  caption: "Ku Klux Klan rally 1920s"
                 },
                 {
                   id: 'mcq-kkk-targ',
                   type: 'question',
                   title: 'Targets',
-                  question: 'Who did the KKK target besides African-Americans?',
-                  options: ['Only African-Americans', 'Immigrants, Catholics, and Jews', 'Rich Landowners', 'British Loyalists'],
-                  correctAnswer: 'Immigrants, Catholics, and Jews'
+                  question: 'During the 1920s, how did the Ku Klux Klan contribute to racial violence in America?',
+                  options: ['By promoting peaceful integration of African-Americans into society', 'By organizing violent attacks against groups they considered not part of “true Americanism”', 'By focusing solely on political campaigning without using violence', 'By protecting African-American communities from racial attacks'],
+                  correctAnswer: 'By organizing violent attacks against groups they considered not part of “true Americanism”'
                 }
               ]
             },
@@ -237,16 +251,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-red',
                   type: 'info',
-                  title: 'Red Summer',
-                  text: 'Red Summer (1919) saw riots in tens of cities with hundreds of deaths. The KKK resurged, targeting blacks, immigrants, Catholics, and Jews to protect "True Americanism." '
+                  title: 'KKK Targets',
+                  text: 'These attacked groups would include and primarily consist of African-Americans, but also included European immigrants, Catholics and Jews, and even “moral offenders” who committed small crimes such as bootlegging and adultery.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "KKK Poster",
+                  src: "/images/racialtensions/kkkposter.png",
+                  caption: "Ku Klux Klan ideology poster"
                 },
                 {
                   id: 'mcq-kkk-targ',
                   type: 'question',
                   title: 'Targets',
-                  question: 'Who did the KKK target besides African-Americans?',
-                  options: ['Only African-Americans', 'Immigrants, Catholics, and Jews', 'Rich Landowners', 'British Loyalists'],
-                  correctAnswer: 'Immigrants, Catholics, and Jews'
+                  question: 'Which groups were targeted by the Ku Klux Klan during its resurgence in the 1920s?',
+                  options: ['Only African-Americans', 'African-Americans, European immigrants, Catholics, Jews, and “moral offenders”', 'Only political leaders and government officials', 'Only people involved in organized labor unions'],
+                  correctAnswer: 'African-Americans, European immigrants, Catholics, Jews, and “moral offenders”'
                 }
               ]
             },
@@ -260,16 +281,23 @@ const racialTension: Topic =
                 {
                   id: 'txt-red',
                   type: 'info',
-                  title: 'Red Summer',
-                  text: 'Red Summer (1919) saw riots in tens of cities with hundreds of deaths. The KKK resurged, targeting blacks, immigrants, Catholics, and Jews to protect "True Americanism." '
+                  title: 'KKK Influence',
+                  text: 'The presence and success of the Ku Klux Klan would go on to encourage further racial violence and promote the harmful stereotypes and views of African-Americans provided by Jim-Crow Laws.'
+                },
+                {
+                  id: "img-def",
+                  type: "image",
+                  title: "Jim Crow Cartoon",
+                  src: "/images/racialtensions/cartoon.png",
+                  caption: "Jim Crow racist cartoon 1920s"
                 },
                 {
                   id: 'mcq-kkk-targ',
                   type: 'question',
                   title: 'Targets',
-                  question: 'Who did the KKK target besides African-Americans?',
-                  options: ['Only African-Americans', 'Immigrants, Catholics, and Jews', 'Rich Landowners', 'British Loyalists'],
-                  correctAnswer: 'Immigrants, Catholics, and Jews'
+                  question: 'How did the Ku Klux Klan affect racial attitudes and violence in the United States during the 1920s?',
+                  options: ['It promoted racial equality and civil rights reforms', 'It encouraged further racial violence and reinforced harmful stereotypes upheld by Jim Crow laws', 'It focused solely on religious issues and ignored race', 'It helped integrate African-Americans into Northern cities'],
+                  correctAnswer: 'It encouraged further racial violence and reinforced harmful stereotypes upheld by Jim Crow laws'
                 }
               ]
             },
